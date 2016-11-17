@@ -1,4 +1,4 @@
-Team Name: Bargain I've come to bargain
+Team Name: Dormamu I've come to bargain
 =======================================
 * Dr. Strange
 * The Ancient One
