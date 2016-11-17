@@ -4,9 +4,10 @@ collage. [Here](https://twitter.com/Tathagata/status/746302962830540801) is an e
 of such a collage.
 
 You'll need:
-** `pip install flask`
-** `pip install Flask-WTF`
-** `pip install meetup-api`
+
+ - `pip install flask`
+ - `pip install Flask-WTF`
+ - `pip install meetup-api`
 
 To get you started, the following piece of code will help you fetch the thumbnail
 images from meetup.com.
