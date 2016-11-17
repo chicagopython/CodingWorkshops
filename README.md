@@ -2,7 +2,7 @@
 This is where programming becomes awesome.
 
 
-# Instructions for submitting changes
+# Instructions for submitting your team's solution
 - Create a fork of this repository for your team
 - Create a branch named solution_teamname where teamname is your team's name. Make sure you have a creative team name
 - Under the solutions directory, create a folder with your team name
