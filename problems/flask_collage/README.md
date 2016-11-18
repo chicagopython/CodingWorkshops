@@ -18,9 +18,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
-```
+    return 'Hello World!'
 
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+`python testflask.py`
 
 To get you started, the following piece of code will help you fetch the thumbnail
 images from meetup.com.
