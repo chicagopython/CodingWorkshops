@@ -9,6 +9,19 @@ You'll need:
  - `pip install Flask-WTF`
  - `pip install meetup-api`
 
+How to create a basic Flask app:
+Follow the instructions [here](http://flask.pocoo.org/docs/0.11/quickstart/)
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+```
+
+
 To get you started, the following piece of code will help you fetch the thumbnail
 images from meetup.com.
 
