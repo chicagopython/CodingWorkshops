@@ -1,5 +1,6 @@
 # CodingWorkshop
-This is where programming becomes awesome.
+Python Project Nights are now being organized by ChiPy. Every third Thursday of the month, i.e. the Thursday following ChiPy, we meet at Braintree at 6:30 pm. Join our one hour workshops to learn problem solving with Python - Webdev, Data Science, Python 101, TDD! Learn something new every month. Also, bring your python projects and get hands on help from experienced developers.
+
 
 
 # Instructions for submitting your team's solution
