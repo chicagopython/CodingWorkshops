@@ -43,7 +43,6 @@ for member in members.results:
         pass # ignore those who do not have a complete profile
 ```
 
-Bonus:
 1. Can you include the name along with the images in your collage?
 
 2. Add a search box to your collage, where you can search some one by name. 
@@ -60,8 +59,9 @@ Choices:
 - Attend RasberryPi Lab (Intermediate)
 - Work on my own project, get help from others 
 
-2. Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
+4. Deploy your app to a public hosting, share the link with the world!
+
+5. Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
 meetup page. Can you fetch the thumbnails from both the pages, eliminate the
 duplicates, and merge them to generate the collage?
 
-3. Deploy your app to a public hosting, share the link with the world!
