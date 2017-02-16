@@ -49,8 +49,7 @@ Bonus:
 2. Add a search box to your collage, where you can search some one by name. 
 On a successful search, it should display that person and their name. On failure, it should give a proper error message.
 
-3. Add the following list of questions to your search result page.
-- What would you like to do at the Project Night? 
+3. Add the following list of questions to your search result page that collects feedback on what an attendee would like to do 
 
 Choices:
 - Help others with Python 101 questions
