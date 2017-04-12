@@ -43,11 +43,25 @@ for member in members.results:
         pass # ignore those who do not have a complete profile
 ```
 
-Bonus:
 1. Can you include the name along with the images in your collage?
 
-2. Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
+2. Add a search box to your collage, where you can search some one by name. 
+On a successful search, it should display that person and their name. On failure, it should give a proper error message.
+
+3. Add the following list of questions to your search result page that collects feedback on what an attendee would like to do 
+
+Choices:
+- Help others with Python 101 questions
+- Help others with Python Data Science questions
+- Help others with Python Web Dev questions
+- Python 101 course (Beginner)
+- Attend Coding Workshop (Intermediate)
+- Attend RasberryPi Lab (Intermediate)
+- Work on my own project, get help from others 
+
+4. Deploy your app to a public hosting, share the link with the world!
+
+5. Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
 meetup page. Can you fetch the thumbnails from both the pages, eliminate the
 duplicates, and merge them to generate the collage?
 
-3. Deploy your app to a public hosting, share the link with the world!
