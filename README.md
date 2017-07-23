@@ -3,6 +3,8 @@ Welcome to the git repository of Python Projects Night organized by Chicago Pyth
 We meet every third Thursday of the month, at 6:30 pm at Braintree's Chicago Office.
 Join our one hour workshops to learn problem solving with Python - Webdev, Data Science, Python 101, TDD! Learn something new every month.
 
+Questions? [Instant help on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
+
 # Team Projects
 These projects are meant for those who are familiar with Python Syntax and looking to take their learning to the next step.
 You will be a part of group of 4 and solve a problem within 1 hour using Python.
