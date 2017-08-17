@@ -55,5 +55,14 @@ Where 3 is the number of cpus you want to distribute
 your tests to.
 
 
+# Coverage and Styleguide
+Once you run pytest, it will show you coverage information
+about your code. Also if your code has some styling issue
+pytest will fail until you fix your code to be pycodestyle
+compliant.
+
+If you want to disble these checking, you can edit
+the pytest.ini file and remove the --flake8 or --cov options
+
 # TODO 
 Add virtual env for windows
