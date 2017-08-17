@@ -8,7 +8,7 @@ problem.
 
 test_team_organizer.py is the test for the module.
 It has one test implemented to show you what a unit
-test in pytest looks like. You wull need to implemet
+test in pytest looks like. You Will need to implement
 the rest of the tests. Feel free to add more tests.
 
 Documentation: https://docs.pytest.org/en/latest/
@@ -28,7 +28,7 @@ To install the requirements run
 
     pip3 install -r requirements.txt
 
-This will install pytest and other required pacakages.
+This will install pytest and other required packages.
 
 # Running the tests
 
@@ -42,11 +42,11 @@ what values your variables have run
 
     pytest -s
 
-While we do not go into much depth of what can be achived by
+While we do not go into much depth of what can be achieved by
 pytest (coming soon to a future project night), here is one cool 
 feature you will enjoy.
 
-Say you have hundreds of tests (unlikley for this
+Say you have hundreds of tests (unlikely for this
 exercise), you can easily parallelize those tests by
 
     pytest -n3
