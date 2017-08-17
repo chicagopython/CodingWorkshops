@@ -17,7 +17,7 @@ class Organizer:
         self.d = collections.deque()
 
     def median_lines(self):
-        return self.d[len(self.d)//2].lines
+        return self.d[len(self.d) // 2].lines
 
     def add(self, p):
         '''Takes a person and adds it to the queue
@@ -37,7 +37,7 @@ class Organizer:
         return ', '.join(p.name for p in persons)
 
     def teams(self):
-        ''' Makes teams by taking 2 from the front of the queue 
+        ''' Makes teams by taking 2 from the front of the queue
             and two from the end of the queue till teams of 4
             can be made. '''
         teams = []

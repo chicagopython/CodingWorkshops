@@ -1,4 +1,4 @@
-from team_orgranizer import OrganizerShell, Person, Organizer
+from team_organizer import OrganizerShell, Person, Organizer
 import pytest
 import random
 import string
@@ -34,7 +34,7 @@ def test_add_person_with_higher_than_median(organizer):
     p = Person('a', '@a', more_than_median_lines)
     organizer.add(p)
 
-    assert organizer.d[len(organizer.d)-1], p
+    assert organizer.d[len(organizer.d) - 1], p
 
 
 def test_add_a_person_with_lower_than_median(organizer):
@@ -70,4 +70,3 @@ def shell(person):
 
 def test_print_cmd(capsys, shell):
     pass
-
