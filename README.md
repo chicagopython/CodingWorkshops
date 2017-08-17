@@ -38,6 +38,11 @@ The organizers of Project Nights need your help! Grouping attendees for Project 
 [Solve it!](problems/py101/python_team_project)
 
 
+#### Pytest Team Projects
+This is an introduction to testing using pytest that uses the same problem as above of grouping project night attendees into teams of 4.
+[Solve it!](problems/py101/testing)
+
+
 ### WebDev
 #### Flask Team Projects
 Build a web app for to group the Python project night  attendees.
