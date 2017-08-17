@@ -21,7 +21,7 @@ main wiki to see how to install python3.
 First create a virtual environment
 
     python3 -m venv venv
-    source venve/bin/activate
+    source venv/bin/activate
 
 
 To install the requirements run
