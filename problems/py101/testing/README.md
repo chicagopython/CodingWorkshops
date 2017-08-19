@@ -30,6 +30,54 @@ To install the requirements run
 
 This will install pytest and other required packages.
 
+# Run the program
+Start by running
+
+      python team_organizer.py
+
+This will drop you to the program's interactive prompt.
+Below is a sample interaction where users named a, b, c, 
+d, e and f are added using the add command.
+Following that, we run the print command where the users
+are grouped in to max of size four where two users have
+written less lines of code than the others.
+
+     t (master *) testing $ python team_organizer.py 
+     Welcome to Chicago Python Project Night Team Organizer
+     org> help
+     help
+     
+     Documented commands (type help <topic>):
+     ========================================
+     add  help  print
+     
+     Undocumented commands:
+     ======================
+     exit
+     
+     org> help add
+     help add
+     Adds a new user. Needs Name, slackhandle, number of lines
+     org> add a @a 100
+     add a @a 100
+     org> add b @b 200
+     add b @b 200
+     org> add c @c 300
+     add c @c 300
+     org> add d @d 400
+     add d @d 400
+     org> add e @e 500
+     add e @e 500
+     org> add f @f 50
+     add f @f 50
+     org> print
+     print
+     ['f, a, e, d']
+     b, c
+     org> 
+     
+
+
 # Running the tests
 
 Simply run pytest at the command prompt.
