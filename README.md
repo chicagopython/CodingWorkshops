@@ -6,6 +6,9 @@ Thursday of the month at 6:30 pm at Braintree's Chicago Office.
 
 [Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
 
+## Code of Conduct
+[Here](http://www.chipy.org/pages/conduct/) is our code of conduct.
+
 We offer two tracks - self-paced solo-project and team-project.
 
 ## Solo Projects
@@ -97,3 +100,4 @@ profile data?
 Diversity in tech communities has been a widely addressed topic. As one of the most active tech community in the world, in this exercise we would try to measure some aspects of diversity in tech community. We will use image recognition on the meetup.com profile pictures of the members of ChiPy user group and determine determine how diverse our attendees are. Then we will compare the same with other tech groups in the city and around the world.
 
 [Solve it!](problems/data_science/diversif.ai.ipynb)
+
