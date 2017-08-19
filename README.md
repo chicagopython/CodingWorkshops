@@ -6,6 +6,15 @@ Thursday of the month at 6:30 pm at Braintree's Chicago Office.
 
 [Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
 
+We offer two tracks - self-paced solo-project and team-project.
+
+## Solo Projects
+If you are planning to work on your own pace on your own project, this would
+be the track of your choice. If you need any help, there are generally plenty
+of helpful folks around to help you out. Also we would love it if you can
+help some one who is looking for help! Enjoy some pizza and beverage, talk to
+other pythonistas and have a good time!
+
 
 ## Team Projects
 These projects are meant for those who are familiar with Python Syntax and 
