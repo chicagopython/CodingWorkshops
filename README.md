@@ -1,4 +1,4 @@
-# Python Project Night - Learn something every month
+## Python Project Night - Learn something new every month
 
 Welcome to the Python Projects Night organized by Chicago Python User Group or ChiPy. 
 Here you will find python challenges that we solve together as a groups every third 
@@ -7,7 +7,7 @@ Thursday of the month at 6:30 pm at Braintree's Chicago Office.
 [Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
 
 
-# Team Projects
+## Team Projects
 These projects are meant for those who are familiar with Python Syntax and 
 looking to take their learning to the next step. You will be a part of group
 of 4 and solve a problem within 1 hour using Python. Each team would be using 
@@ -16,7 +16,7 @@ of 4 and solve a problem within 1 hour using Python. Each team would be using
 would switch to the next team member.
 
 
-# Upcoming Team Projects
+## Upcoming Team Projects
 ### Py101
 #### September 21, 2017, 6:30 pm
 #### RSVP [here](https://www.meetup.com/_ChiPy_/events/239174106/)
@@ -27,7 +27,7 @@ would switch to the next team member.
 * Text editor: Atom, Sublime Text
 * OS: GNU/Linux. OS X, Windows
 
-# Previous Projects
+## Previous Projects
 Here is a list of projects we have solved previosuly. These are great exercises
 if you are planning to get level up your skills. Try them out and if you need any
 help [ask us on slack](https://chipy.slack.com/messages/C4SRS5G3B/details/) 
