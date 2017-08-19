@@ -15,6 +15,9 @@ of helpful folks around to help you out. Also we would love it if you can
 help some one who is looking for help! Enjoy some pizza and beverage, talk to
 other pythonistas and have a good time!
 
+Take a look at the previous projects, if you are looking for projects on
+webdev, data science, or simple apps using python.
+
 
 ## Team Projects
 These projects are meant for those who are familiar with Python Syntax and 
@@ -22,19 +25,22 @@ looking to take their learning to the next step. You will be a part of group
 of 4 and solve a problem within 1 hour using Python. Each team would be using 
 2 laptops - one for coding and one for research. Every team member would have 
 15 minutes of keyboard time. After 15 minutes, the control of the keyboard 
-would switch to the next team member.
+would switch to the next team member. At the end of the hour, we will
+select a team to show their solution to us.
 
 
-## Upcoming Team Projects
-### Py101
-#### September 21, 2017, 6:30 pm
-#### RSVP [here](https://www.meetup.com/_ChiPy_/events/239174106/)
+### Upcoming Team Projects
+#### Py101
+##### September 21, 2017, 6:30 pm
+##### RSVP [here](https://www.meetup.com/_ChiPy_/events/239174106/)
 
-# What should you bring
+
+### What should you bring
 * Wi-fi powered laptop, power chord
 * Python: 3.5 (We can not guarantee help if you are using Python 2.7)
 * Text editor: Atom, Sublime Text
 * OS: GNU/Linux. OS X, Windows
+
 
 ## Previous Projects
 Here is a list of projects we have solved previosuly. These are great exercises
