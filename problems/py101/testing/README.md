@@ -1,8 +1,7 @@
 # Intro to PyTest
 This is a gentle introduction to testing with pytest.
 We will use the problem that we have seen before
-at project night, [how to group people into teams of 4]
-(https://github.com/chicagopython/CodingWorkshops/blob/master/problems/py101/python_team_project).
+at project night, [how to group people into teams of 4](https://github.com/chicagopython/CodingWorkshops/blob/master/problems/py101/python_team_project).
 
 
 team_organizer.py is simplified implementation of the
