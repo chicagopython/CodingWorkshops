@@ -1,32 +1,42 @@
-# Python Projects Night
-Welcome to the git repository of Python Projects Night organized by Chicago Python User Group or ChiPy.
-We meet every third Thursday of the month, at 6:30 pm at Braintree's Chicago Office.
-Join our one hour workshops to learn problem solving with Python - Webdev, Data Science, Python 101, TDD! Learn something new every month.
+# Python Project Night - Learn something every month
 
-Questions? [Instant help on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
+Welcome to the Python Projects Night organized by Chicago Python User Group or ChiPy. 
+Here you will find python challenges that we solve together as a groups every third 
+Thursday of the month at 6:30 pm at Braintree's Chicago Office. 
+
+[Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
+
 
 # Team Projects
-These projects are meant for those who are familiar with Python Syntax and looking to take their learning to the next step.
-You will be a part of group of 4 and solve a problem within 1 hour using Python.
-Each team would be using 2 laptops - one for coding and one for research.
-Every team member would have 15 minutes of keyboard time.
-After 15 minutes, the control of the keyboard would switch to the next team member.
+These projects are meant for those who are familiar with Python Syntax and 
+looking to take their learning to the next step. You will be a part of group
+of 4 and solve a problem within 1 hour using Python. Each team would be using 
+2 laptops - one for coding and one for research. Every team member would have 
+15 minutes of keyboard time. After 15 minutes, the control of the keyboard 
+would switch to the next team member.
 
 
 # Upcoming Team Projects
-### Testing with Python
-
+### Py101
+#### September 21, 2017, 6:30 pm
+#### RSVP [here](https://www.meetup.com/_ChiPy_/events/239174106/)
 
 # What should you bring
 * Wi-fi powered laptop, power chord
-* Python: 2.7 or 3.5
+* Python: 3.5 (We can not guarantee help if you are using Python 2.7)
 * Text editor: Atom, Sublime Text
+* OS: GNU/Linux. OS X, Windows
 
 # Previous Projects
+Here is a list of projects we have solved previosuly. These are great exercises
+if you are planning to get level up your skills. Try them out and if you need any
+help [ask us on slack](https://chipy.slack.com/messages/C4SRS5G3B/details/) 
+
 ### Python101
 #### Python Koans
 For this exercise we will learn the Zen of Python using Test Driven Development.
-Python Koans is a suite of broken tests, which are written against Python code that demonstrate how to Pythonic code.
+Python Koans is a suite of broken tests, which are written against Python code that 
+demonstrate how to write idiomatic python.
 Your job is to fix the broken tests by filling in the missing parts of the code.
 
 [Solve it!](problems/py101/python_koans)
