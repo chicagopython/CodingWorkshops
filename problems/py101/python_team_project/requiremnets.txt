@@ -1,0 +1,3 @@
+prompt_toolkit==1.0.15
+meetup-api==0.1.1
+asciinema==1.4.0
