@@ -98,10 +98,9 @@ program.
 - `meetup-api` provides us with the data for the meetup
 - `asciinema` isn't strictly necessary and we'll talk about it last
 
-`class TeamBuilder` is where you would be writing your application
-logic.
+`execute` function is where you would be writing your application logic.
 
-`main` function will use the `TeamBuilder` class.
+You should not require to make changes to `main` and `get_names` functions. In an upcoming project nights we will dig into `get_names` and make changes to it.
 
 Next lets run app.py
 
@@ -217,9 +216,7 @@ Typing in names of the attendees of project night would be time consuming
 and error prone. Lets add auto-completion magic to it!
 
 The funcion `get_names` uses meetup-api and returns a list of names for the attendees.
-There is an `event_id` in `get_names`, where you can plugin tonight's event id
-and get names of those who RSVP-ed. You'll find tonight's event id from the url of
-meetup.com.
+All you need to do is include a call to `get_names` in the command_completer.
 
 ## Feature 9. Tell the world (optional, OS X or Linux only)
 We have also installed asciinema - a tool that allows you
