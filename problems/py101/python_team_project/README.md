@@ -99,7 +99,7 @@ program.
 
 - `prompt_toolkit` makes it easy for building awesome command line apps
 - `meetup-api` provides us with the data for the meetup
-- `asciinema` isn't strictly necessary and we'll talk about it last
+- `asciinema` which is also in the `requirements.txt` isn't strictly necessary and we'll talk about it last
 
 `execute` function is where you would be writing your application logic.
 
