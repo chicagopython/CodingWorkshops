@@ -67,7 +67,7 @@ reference, the linux kernel is over 23 million lines of code!
 
 Here you will find the basic skeleton of the app under `app.py`. (after September 21, 2017)
 
-### Set up
+### Set up virtualenv
 If you are using Linux or OS X, run the following to create a new virtualenv
 
 	python3 -m venv venv
