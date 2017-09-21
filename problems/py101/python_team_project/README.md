@@ -1,9 +1,9 @@
 The organizers of Project Nights need your help! Grouping people for
-project night team project is a manual task. Why do it manually, when
+team projects is a manual task. Why do it manually, when
 we can automate it?
 
 ### Is this project for you
-Before you progress further, lets check if we are ready to solve this. You should
+Before you progress further, let's check if we are ready to solve this. You should
 - Have a personal computer with working wifi and power cord
 - Have Python 3 installed on your computer. Yep, Python 3 only.
 - Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
@@ -12,10 +12,10 @@ Before you progress further, lets check if we are ready to solve this. You shoul
 - Have some idea about `virtualenv` and installing packages with `pip`
 
 This project is not tested using Jupyter Notebook, PyCharm,
-Spider, {{insert abstruse ide/text editor/programming environment}}.
+Spider, or any other ide/text editor/programming environment for that matter.
 Atom or Sublime Text and the command line are the only supported development environment for this project.
 
-Sounds reasonable? Then lets dive in - and build an awesome command line app using python.
+Sounds reasonable? Then let's dive in - and build an awesome command line app using python.
 
 ### Can command line applications be cool
 You bet!
@@ -41,11 +41,11 @@ Our objective is to build an awesome command line application in Python3 that
 To keep the team composition balanced in terms of experience, we want every team
 to have two members with more experience than the other two.
 Measuring experience is very subjective and difficult, but we will keep it simple.
-We will rely on a (not very scientific) metic - Lines of code written till date.
+We will rely on a (not very scientific) metic - lines of code written till date.
 
 We will create a list by taking names of people from tonight's RSVP list. Along with their name we will also include the number of lines of code that person has written till date in Python or an equivalent language. Imagine this as a tool that one of the organizers uses to checkin attendees as they start coming in on the day of Project Night.
 
-And yeah, this number of lines can be just a rough estimate. But for some
+And yeah, this number of lines can be just a rough estimate. As a
 reference, the linux kernel is over 23 million lines of code!
 
 ### Bootstrap
@@ -84,7 +84,7 @@ On Windows, run the following
 
 [![asciicast](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png)](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj)
 
-Next lets get started by looking into the code.
+Next let's get started by looking into the code.
 
 ## Feature 0: Look into app.py
 app.py is the script contains some code to get you started.
@@ -102,7 +102,7 @@ program.
 
 You should not require to make changes to `main` and `get_names` functions. In an upcoming project nights we will dig into `get_names` and make changes to it.
 
-Next lets run app.py
+Next let's run app.py
 
 	   python3 app.py
 
@@ -126,7 +126,7 @@ You can now press the up arrow key and access the history of the commands you ha
   GoodBye!
 
 ### Feature 1: Implement the Add command
-Next lets create a command where the user of the program can register new participants to build up the list of users from whom teams will be formed.
+Next let's create a command where the user of the program can register new participants to build up the list of users from whom teams will be formed.
 
 The command should look like the following
 
@@ -177,10 +177,10 @@ Hint: Python3 has the statistics module, so you can use
 
 	import statistics
 	statistics.median([1,2,3,4,5])
-	
+
 
 ## Feature 3: Add the teams command (optional)
-The next command we will implement is `teams` command. Lets say you
+The next command we will implement is `teams` command. Let's say you
 have added a few people already and know what the median line count
 is for the people you have added so far. On issuing the `teams` command
 it should output teams of four such that each team contains
@@ -213,7 +213,7 @@ Add the remaining commands.
 
 ## Feature 8. Auto-completion for participant names (optional)
 Typing in names of the attendees of project night would be time consuming
-and error prone. Lets add auto-completion magic to it!
+and error prone. Let's add auto-completion magic to it!
 
 The funcion `get_names` uses meetup-api and returns a list of names for the attendees.
 All you need to do is include a call to `get_names` in the command_completer.
@@ -221,7 +221,7 @@ All you need to do is include a call to `get_names` in the command_completer.
 ## Feature 9. Tell the world (optional, OS X or Linux only)
 We have also installed asciinema - a tool that allows you
 to create recordings of your terminal sessions. In order to tell
-the world what your team has made, lets make a small recording.
+the world what your team has made, let's make a small recording.
 
      ascriinmea rec teamname.json
 
