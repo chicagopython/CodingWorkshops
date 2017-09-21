@@ -140,7 +140,7 @@ that person has written in Python or a similar programming language in their lif
    > add Tathagata Dasgupta 1
 
 
-### Feature 2: Add some error checking
+### Feature 2: Add some error checking (optional)
 You might be asking what if the user incorrectly types something that is not a number
 for the `number of lines`. Indeed that would be incorrect. Show an error message
 if <number of lines> is not a number.
@@ -174,6 +174,11 @@ and the median of the line count.
 Your output need not be exactly the same, but should show the
 correct data. The Median line count will be used in the next
 features.
+Hint: Python3 has the statistics module, so you can use
+
+	import statistics
+	statistics.median([1,2,3,4,5])
+	
 
 ## Feature 3: Add the teams command
 The next command we will implement is `teams` command. Lets say you
