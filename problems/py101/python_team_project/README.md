@@ -15,7 +15,10 @@ This project is not tested using Jupyter Notebook, PyCharm,
 Spider, or any other ide/text editor/programming environment for that matter.
 Atom or Sublime Text and the command line are the only supported development environment for this project.
 
+Short url for this page: **https://git.io/vdv43**
+
 Sounds reasonable? Then let's dive in - and build an awesome command line app using python.
+
 
 ### Can command line applications be cool
 You bet!
@@ -192,6 +195,11 @@ together.
 
 With our running example, there would be a team of four, and the
 remaining 1 should be in another group.
+
+		> teams
+		Group 1: Tathagata Dasgupta, Jason Wirth, Brian Ray, Guido Van Rossum
+		Group 2: Adam Bain
+
 
 ## Feature 4. Enhance Team command (optional)
 Add a unique team name
