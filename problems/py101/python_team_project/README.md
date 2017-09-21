@@ -180,7 +180,7 @@ Hint: Python3 has the statistics module, so you can use
 	statistics.median([1,2,3,4,5])
 	
 
-## Feature 3: Add the teams command
+## Feature 3: Add the teams command (optional)
 The next command we will implement is `teams` command. Lets say you
 have added a few people already and know what the median line count
 is for the people you have added so far. On issuing the `teams` command
