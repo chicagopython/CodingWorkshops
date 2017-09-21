@@ -99,7 +99,7 @@ program.
 `class TeamBuilder` is where you would be writing your application
 logic.
 
-`main` function will use the TeamBuilder class.
+`main` function will use the `TeamBuilder` class.
 
 Next lets run app.py
 
@@ -107,22 +107,22 @@ Next lets run app.py
 
 This should drop you to a prompt.
 
-		 >
+	>
 
 Type in something to that prompt.
 
-		 > Hola amigo
-		 > You issued: Hola amigo
+	> Hola amigo
+	> You issued: Hola amigo
 
 Try a few more
 
-		> Gracias
-		> You issued:Gracias
+	> Gracias
+	> You issued:Gracias
 
 You can now press the up arrow key and access the history of the commands you have issued. To exit out of the program, you can type Ctrl-D.
 
-		>
-    GoodBye!
+	>
+  GoodBye!
 
 ### Feature 1: Implement the Add command
 Next lets create a command where the user of the program can register new participants to build up the list of users from whom teams will be formed.
@@ -145,6 +145,8 @@ if <number of lines> is not a number.
 
 		> add Tathagata Dasgupta o
 		ERROR: number of lines should be, er, a "number"
+
+Are there other error conditions that can arise?
 
 ## Feature 2: Implement a List command
 Next add a new command list.
