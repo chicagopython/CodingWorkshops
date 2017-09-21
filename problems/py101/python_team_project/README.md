@@ -6,7 +6,7 @@ we can automate it?
 Before you progress further, lets check if we are ready to solve this. You should
 - Have a personal computer with working wifi and power cord
 - Have Python 3 installed on your computer. Yep, Python 3 only.
-- Have Atom or Sublime Text installed in your computer.
+- Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
 - Have written & ran programs in Python from the command line
 - Have some idea about lists, dictionaries, functions and classes
 - Have some idea about `virtualenv` and installing packages with `pip`
