@@ -12,7 +12,7 @@ Before you progress further, lets check if we are ready to solve this. You shoul
 - Have some idea about `virtualenv` and installing packages with `pip`
 
 This project is not tested using Jupyter Notebook, PyCharm,
-Spider, {{insert ide/text editor/programming environment of your choice}}.
+Spider, {{insert abstruse ide/text editor/programming environment}}.
 Atom or Sublime Text and the command line are the only supported development environment for this project.
 
 Sounds reasonable? Then lets dive in - and build an awesome command line app using python.
