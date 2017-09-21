@@ -51,7 +51,7 @@ reference, the linux kernel is over 23 million lines of code!
 
 		git clone https://github.com/chicagopython/CodingWorkshops.git
 
-- If not go to https://github.com/chicagopython/CodingWorkshops
+- If not, go to https://github.com/chicagopython/CodingWorkshops
 - Click on the Download Zip and unzip the file that gets downloaded
 - From your command line, change directory to the path where you have downloaded it.
 - On linux or OS X
