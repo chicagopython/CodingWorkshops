@@ -189,16 +189,16 @@ together.
 With our running example, there would be a team of four, and the
 remaining 1 should be in another group.
 
-## Feature 4. Enhance Team command
+## Feature 4. Enhance Team command (optional)
 Add a unique team name
 
-## Feature 5. Enhance Team command
+## Feature 5. Enhance Team command (optional)
 Make up random room names and add a room name for each team.
 
-## Feature 6. Enhance Teams command
+## Feature 6. Enhance Teams command (optional)
 Print the teams sorted with the average number of lines of code for each team.
 
-## Feature 7. Auto-completion for commands
+## Feature 7. Auto-completion for commands (optional)
 Adding auto completion is easy with `prompt_toolkit`. In `app.py` the following line is used to include the
 `add` command to auto-completion.
 
@@ -207,7 +207,7 @@ Adding auto completion is easy with `prompt_toolkit`. In `app.py` the following 
 Add the remaining commands.
 
 
-## Feature 8. Auto-completion for participant names
+## Feature 8. Auto-completion for participant names (optional)
 Typing in names of the attendees of project night would be time consuming
 and error prone. Lets add auto-completion magic to it!
 
