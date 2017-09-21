@@ -8,7 +8,7 @@ Before you progress further, let's check if we are ready to solve this. You shou
 - Have Python 3 installed on your computer. Yep, Python 3 only.
 - Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
 - Have written & ran programs in Python from the command line
-- Have some idea about lists, dictionaries, functions and classes
+- Have some idea about lists, dictionaries and functions
 - Have some idea about `virtualenv` and installing packages with `pip`
 
 This project is not tested using Jupyter Notebook, PyCharm,
