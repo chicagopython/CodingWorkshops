@@ -21,8 +21,9 @@ Sounds reasonable? Then lets dive in - and build an awesome command line app usi
 You bet!
 Checkout this PyCon 2017 talk on which this project is based
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=hJhZhLg3obk" target="_blank"><img src="http://img.youtube.com/vi/hJhZhLg3obk/0.jpg"
+alt="Amjith Ramanujam Awesome Command Line Tools PyCon 2017" width="560" height="315" border="10" /></a>
 
-[![Amjith Ramanujam Awesome Command Line Tools PyCon 2017](http://img.youtube.com/vi/hJhZhLg3obk/0.jpg)](http://www.youtube.com/watch?v=hJhZhLg3obk "Amjith Ramanujam Awesome Command Line Tools PyCon 2017")
 
 ### What is a Team Project
 Glad you asked! A team project is an hour long problem solving session where each team
