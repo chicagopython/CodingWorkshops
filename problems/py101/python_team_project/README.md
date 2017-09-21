@@ -20,10 +20,12 @@ Sounds reasonable? Then lets dive in - and build an awesome command line app usi
 ### Can command line applications be cool
 You bet!
 Checkout this PyCon 2017 talk on which this project is based
+
+
 [![Amjith Ramanujam Awesome Command Line Tools PyCon 2017](http://img.youtube.com/vi/hJhZhLg3obk/0.jpg)](http://www.youtube.com/watch?v=hJhZhLg3obk "Amjith Ramanujam Awesome Command Line Tools PyCon 2017")
 
 ### What is a Team Project
-Glad you asked! A team project is a hour long problem solving session where each team
+Glad you asked! A team project is an hour long problem solving session where each team
 consists of four members of different expertise level. The teams are formed from the
 list of attendees of the project night.
 
@@ -33,6 +35,7 @@ Our objective is to build an awesome command line application in Python3 that
 - allows creating list of people who want to participate in a team project
 - once the list is created, the program automatically creates teams of four
 
+### A Balanced Team
 To keep the team composition balanced in terms of experience, we want every team
 to have two members with more experience than the other two.
 Measuring experience is very subjective and difficult, but we will keep it simple.
