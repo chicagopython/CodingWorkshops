@@ -15,7 +15,7 @@ This project is not tested using Jupyter Notebook, PyCharm,
 Spider, {{insert ide/text editor/programming environment of your choice}}.
 Atom or Sublime Text and the command line are the only supported development environment for this project.
 
-Sounds fun? Lets dive in - and build an awesome command line app using python.
+Sounds reasonable? Then lets dive in - and build an awesome command line app using python.
 
 ### Can command line applications be cool
 You bet!
