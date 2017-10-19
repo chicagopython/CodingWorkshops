@@ -6,16 +6,15 @@ In the [team project command line application](https://github.com/chicagopython/
 application for creating teams out of people who have RSVP-ed for a Python Project
 Night. However, it is much easier to give a link of your app to someone
 than asking them to use a command line. So, we will create a web app, that allows
-forming teams from the list of RSVP-s from meetup.com. Along with their name we
-will ask for the number of lines of code that person has written in
-Python or an equivalent language. The number of lines can be just a rough estimate. As a
-reference, the linux kernel is over 23 million lines of code!
+forming teams from the list of RSVP-s from meetup.com. We
+will ask for the number of lines of code that a person has written in
+Python or an equivalent language and use it for putting them in a team. The number of lines is just a rough estimate. As a reference, the linux kernel is over 23 million lines of code!
 
 In short, imagine this as a tool that one of the
 organizers uses to checkin attendees as they start coming in on the day of
 Project Night.
 
-Short url for this page: ** https://git.io/vdQj6 **
+Short url for this page: **https://git.io/vdQj6**
 
 ### Is this project for you
 Before you progress further, let's check if we are ready to solve this. You should
@@ -41,9 +40,8 @@ Our objective is to build an web based interface using Flask that
 - Each entry in the list should have
   - The name of the person
   - The meetup.com profile image of the person
-  - A radio button that will allow selecting that person
   - An input text box that allows entering lines of code
-- On hitting the submit button we should get the teams of four
+- On hitting the submit button we should get teams of four
 
 
 ### Flask
@@ -128,12 +126,12 @@ Split the list of people selected into teams of 4
 
 Your display of each team should include
 
-  Team Number: XYZ
-  Name of team member1, Lines of code, (pic)
-  Name of team member2, Lines of code, (pic)
-  Name of team member3, Lines of code, (pic)
-  Name of team member4, Lines of code, (pic)
-  (Total lines of code:)
+    Team Number: XYZ
+    Name of team member1, Lines of code, (pic)
+    Name of team member2, Lines of code, (pic)
+    Name of team member3, Lines of code, (pic)
+    Name of team member4, Lines of code, (pic)
+    (Total lines of code:)
 
 where things in () are optional.
 There is no specific criteria for creating the teams as of now. We handle that
