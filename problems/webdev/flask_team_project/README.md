@@ -23,7 +23,7 @@ Before you progress further, let's check if we are ready to solve this. You shou
 - Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
 - Have written & ran programs in Python from the command line
 - Have some idea about lists, dictionaries and functions
-- Have some idea about `virtualenv` and installing packages with `pip`
+- Have created a virtual environment and installing packages with `pip`
 - You have read the [flask quick introduction](http://flask.pocoo.org/docs/0.12/quickstart/)
 
 ### What is not supported
