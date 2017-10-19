@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <table>
+    <form action="teams" method="POST">
+    {% for name, img in rsvps.items() %}
+      <tr>
+        <td>
+        <!-- Feature 2 --> <br> {{ name }}
+      </td>
+      <td>
+        <!-- Feature 3 -->
+      </td>
+    </tr>
+    {% endfor %}
+        <input type=submit value="teams">
+  </form>
+</table>
+</body>
+</html>
