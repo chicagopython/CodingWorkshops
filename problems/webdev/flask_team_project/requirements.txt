@@ -1,0 +1,4 @@
+Flask==0.12.2
+meetup-api==0.1.1
+Flask-WTF==0.14.2
+flask-debugtoolbar==0.10.1

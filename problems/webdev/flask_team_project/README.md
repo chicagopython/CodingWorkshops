@@ -1,78 +1,155 @@
-The organizers of Project Nights need your help! Grouping people for project night team project is such a manual task! Why do it manually, when we can automate it? We open the problem to you.
-We want a person (henceforth gatekeeper) to record project night preferences of people as they walk through the door. There are two simple questions in order to assign people into groups. Last assignment you built a command line program for this. In this exercise we would like enhance it to be a flask app.
+In this project we will be building a fully functional web app using
+Flask.
 
-Lets first set up the environment.
+### The project
+In the [team project command line application](https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/python_team_project), we built an awesome command line
+application for creating teams out of people who have RSVP-ed for a Python Project
+Night. However, it is much easier to give a link of your app to someone
+than asking them to use a command line. So, we will create a web app, that allows
+forming teams from the list of RSVP-s from meetup.com. Along with their name we
+will ask for the number of lines of code that person has written in
+Python or an equivalent language. The number of lines can be just a rough estimate. As a
+reference, the linux kernel is over 23 million lines of code!
 
+In short, imagine this as a tool that one of the
+organizers uses to checkin attendees as they start coming in on the day of
+Project Night.
 
-    pip install flask
-    pip install Flask-WTF
-    pip install meetup-api
+Short url for this page: ** https://git.io/vdQj6 **
 
-How to create a basic Flask app: Follow the instructions [here](http://flask.pocoo.org/docs/0.11/quickstart/).
+### Is this project for you
+Before you progress further, let's check if we are ready to solve this. You should
+- Have a personal computer with working wifi and power cord
+- Have Python 3 installed on your computer. Yep, Python 3 only.
+- Have [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/3) installed in your computer.
+- Have written & ran programs in Python from the command line
+- Have some idea about lists, dictionaries and functions
+- Have some idea about `virtualenv` and installing packages with `pip`
+- You have read the [flask quick introduction](http://flask.pocoo.org/docs/0.12/quickstart/)
 
-    from flask import Flask
-    app = Flask(__name__)
+### What is not supported
+This project is not tested using Jupyter Notebook, PyCharm,
+Spider, or any other ide/text editor/programming environment for that matter.
+Atom or Sublime Text and the command line are the only supported development
+environment for this project.
 
-    @app.route('/')
-    def hello_world():
-        return 'Hello World!'
+Sounds good? Then let's dive into building a fully functional web app using flask.
 
-    if __name__ == '__main__':
-        app.run(debug=True)
-
-Now run it!
-
-    python app.py
-
-Next let’s hook up meetup.com api using the API key you get from https://secure.meetup.com/meetup_api/key/
-
-    from flask import Flask
-    app = Flask(__name__)
-    import meetup.api
-
-    def get_names():
-        client = meetup.api.Client(‘get your key’)
-
-        rsvps=client.GetRsvps(event_id='235484841', urlname='_ChiPy_')
-        member_id = ','.join([str(i['member']['member_id']) for i in rsvps.results])
-        members = client.GetMembers(member_id=member_id)
-
-        foo=''
-        for member in members.results:
-            try:
-                foo+='{0}, {1}, {2}'.format(member['name'], member['id'], member['photo']['thumb_link'])
-            except:
-                pass # ignore those who do not have a complete profile
-
-        return foo
-
-    @app.route('/')
-    def hello_world():
-        return get_names()
-
-    if __name__ == '__main__':
-        app.run(debug=True)
+### Minimum Viable Product
+Our objective is to build an web based interface using Flask that
+- Shows a list of people who have RSVP-ed for the project Night
+- Each entry in the list should have
+  - The name of the person
+  - The meetup.com profile image of the person
+  - A radio button that will allow selecting that person
+  - An input text box that allows entering lines of code
+- On hitting the submit button we should get the teams of four
 
 
+### Flask
+For building the web interface, we will be using Flask.
+Flask is a micro web framework - it takes care of handling of the HTTP
+protocol for you and allows you focus on your application. It is flexible,
+lightweight yet powerful.
 
-Using some WTF templates, you can make it look like below (hopefully prettier than this). Remember that you should ask which Projects they would like work on and how many lines of Python they’ve written (in lieu of any better assessment). You may want to ask for more:
+### Setup your environment
+#### Get the source code
+- If you are familiar with `git`, run
+
+		git clone https://github.com/chicagopython/CodingWorkshops.git
+
+- If not, go to https://github.com/chicagopython/CodingWorkshops
+- Click on the Download Zip and unzip the file that gets downloaded
+- From your command line, change directory to the path where you have downloaded it.
+- On linux or OS X
+
+ 		> cd path/to/CodingWorkshops/problems/webdev/flask_team_project/
+
+- On Windows
+
+		> cd path\to\CodingWorkshops\problems\webdev\flask_team_project
 
 
+Here you will find the basic skeleton of the app under `app.py`.
 
-This UI allows the gatekeeper to scroll through the RSVP list, and check in people for solo or team projects. In addition he/she would also ask the number of lines of code (Python or similar) an attendee has written till date.  We are looking for a rough estimate for line count, but the entries should be a valid number.
-After checkin of all the attendees is complete - the gatekeeper can hit submit to kick off the grouping algorithm. For this you will need to know how to a form submit is done using flask.
+### Set up virtualenv
+If you are using Linux or OS X, run the following to create a new virtualenv
 
-The algorithm groups those willing to attend a team-project together into groups of four and displays each group with a team name and a room name. Ideally you should be able to import the algorithm from the work you did last project night.
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    export FLASK_APP=app.py
 
-The criteria for the groups are:
-* 2 person who have written less than median lines of code
-* 2 person who has written more than written more than median
+On Windows, run the following
+
+    python3 -m venv venv
+    venv\Scripts\activate
+    pip install -r requirements.txt
+    set %FLASK_APP%=app.py
+
+[![asciicast](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png)](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj)
+
+With your environment now set up run
+
+    flask run
+
+This will start a web server on port 5000.
+Next load up http://locahost:5000/rsvps in your web browser
+
+### Feature 1: Read app.py
+`app.py` is the script is where the magic happens.
+
+Lets start at the routes:
+
+    @app.route('/rsvps')
+    def rsvps():
 
 
-### Bonus questions
-* Provide the text search area, that allows searching by attendee
-* If the search finds a match, it shows a page for the user with his/her name, choice for solo/team project, and input for line count. Finally a button to hit submit to insert the recorded info.
-* Make it pretty
-* Do error validation
-* Deploy this on a cloud hosting
-* Integrate this solution in chipy.org
+    @app.route('/teams', methods=['GET', 'POST'])
+    def teams():
+
+Discuss among the team how render_template function is used in rsvps and teams
+function.
+
+### Feature 2: Show profile images in rsvps
+Make changes to rsvps.html (inside templates) to show images of next to the
+names of the people.
+
+### Feature 3: Add a text box next for lines of code
+Add an input type textbox that will take a number as input
+
+### Feature 4: Display the lines of code
+On hitting submit, the numbers you entered against each person should show up
+on the `/teams` page.
+
+### Feature 5: Display teams
+As of now, everybody is listed under one team: Team 1.
+Split the list of people selected into teams of 4
+
+Your display of each team should include
+
+  Team Number: XYZ
+  Name of team member1, Lines of code, (pic)
+  Name of team member2, Lines of code, (pic)
+  Name of team member3, Lines of code, (pic)
+  Name of team member4, Lines of code, (pic)
+  (Total lines of code:)
+
+where things in () are optional.
+There is no specific criteria for creating the teams as of now. We handle that
+next.
+
+### Feature 6: Tell the world
+Record a gif of your app in motion and tweet tweet the link to @chicagopython with "Python Project Night Mentorship". Include the twitter handles of your team members.
+
+### Feature 7: Integrate team creating logic (optional)
+Code reuse is a hallmark well written code base. Of course, we are
+not talking about copy pasting the code, but using the abstractions that a
+programming language provides so that there is minimum duplication of code.
+
+Use the code that you wrote in the team project command line application. The logic
+that you have implemented earlier for grouping your list of people into teams
+should now be used for creating your teams.
+
+Thanks! Thats all folks!
+If you found a bug or think you some instructions are missing - just open a issue in this repository.
