@@ -13,6 +13,20 @@ class CommandError(Exception):
     pass
 
 
+class Team:
+
+    def __init__(self, max_size):
+        self.name = ""
+        self.members = []
+        self.max_size = max_size
+
+    def add_member(self, member):
+        self.members.append(member)
+
+    def is_full(self):
+        return True if len(self.members) >= self.max_size else False
+
+
 class Command:
 
     def __init__(self, args):
@@ -108,11 +122,11 @@ class TeamCommand(Command):
         if storage.unassigned:
             storage.calculate_teams()
         print(storage.teams)
-        for name, members in storage.teams.items():
+        for tid, team in storage.teams.items():
             print(
                 "{}: {}".format(
-                    name,
-                    ", ".join(m['name'] for m in members if m)))
+                    team.name,
+                    ", ".join(m['name'] for m in team.members if m)))
         output = []
         return output
 
@@ -122,7 +136,7 @@ class Storage:
     def __init__(self):
         self.people = OrderedDict()
         self.unassigned = []
-        self.teams = {}
+        self.teams = OrderedDict()
 
     def validate_args_cmd(self, cmd):
         cmd.validate_args(self)
@@ -141,7 +155,7 @@ class Storage:
         med = self.get_median_lines()
         lower_med = [x[1] for x in self.people.items() if x[1]['lines'] <= med]
         higher_med = [x[1] for x in self.people.items() if x[1]['lines'] > med]
-        i = 0
+        group_no = 0
 
         def first_available(list1, list2):
             try:
@@ -158,14 +172,21 @@ class Storage:
             return x
 
         while True:
-            i += 1
-            name = "Group {}".format(i)
+            group_no += 1
+            name = "Group {}".format(group_no)
+
             if not lower_med and not higher_med:
                 break
-            team = []
-            for x in range(0, size):
-                team.append(first_available(lower_med, higher_med))
-            self.teams[name] = team
+
+            team = Team(max_size=size)
+            team.name = name
+
+            toggle = 0
+            while not team.is_full():
+                toggle ^= 1
+                m1, m2 = (lower_med, higher_med) if toggle else (higher_med, lower_med)
+                team.add_member(first_available(m1, m2))
+            self.teams[group_no] = team
 
 
 def get_names():
