@@ -137,7 +137,7 @@ class Storage:
         lines = [x[1]['lines'] for x in self.people.items()]
         return statistics.median(lines) if lines else None
 
-    def calculate_teams(self):
+    def calculate_teams(self, size=4):
         med = self.get_median_lines()
         lower_med = [x[1] for x in self.people.items() if x[1]['lines'] <= med]
         higher_med = [x[1] for x in self.people.items() if x[1]['lines'] > med]
@@ -162,11 +162,10 @@ class Storage:
             name = "Group {}".format(i)
             if not lower_med and not higher_med:
                 break
-            slot1 = first_available(lower_med, higher_med)
-            slot2 = first_available(lower_med, higher_med)
-            slot3 = first_available(higher_med, lower_med)
-            slot4 = first_available(higher_med, lower_med)
-            self.teams[name] = [slot1, slot2, slot3, slot4]
+            team = []
+            for x in range(0, size):
+                team.append(first_available(lower_med, higher_med))
+            self.teams[name] = team
 
 
 def get_names():
