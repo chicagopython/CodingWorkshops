@@ -93,6 +93,7 @@ With your environment now set up run
     flask run
 
 And you'll see 🔥.
+
 The reason is there is a string in the `app.py` file that allows meetup.com to identify who is trying to get data from them. It is called the API key. The one currently in the code is one of my old ones. You need to get one for your team from [here](https://secure.meetup.com/meetup_api/key/) - obviously, you'll have to be logged into meetup.com to get the key.
 Plug in your key whereever most relevant in `app.py` and run the above command again.
 
@@ -113,6 +114,22 @@ Lets start at the routes:
 
 Discuss among the team how render_template function is used in rsvps and teams
 function.
+
+Two useful tools are pretty print and `pdb`
+
+#### Pretty print
+
+    >> from pprint import pprint as pp
+    >> pp(member_rsvps)
+
+This will give you a better view of what the function `get_names()` returns.
+
+#### pdb
+Python comes with a debugger `pdb`. Here's a [cheat sheet](https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf)
+
+You can stick the following line anywhere in the code and make it halt so that you can better inspect the data and flow.
+
+    import pdb; pdb.set_trace()
 
 ### Feature 2: Show profile images in rsvps
 Make changes to rsvps.html (inside templates) to show images of next to the
