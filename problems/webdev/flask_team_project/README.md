@@ -87,11 +87,16 @@ On Windows, run the following
 
 [![asciicast](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png)](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj)
 
+### Feature 0: run app.py
 With your environment now set up run
 
     flask run
 
-This will start a web server on port 5000.
+And you'll see 🔥.
+The reason is there is a string in the `app.py` file that allows meetup.com to identify who is trying to get data from them. It is called the API key. The one currently in the code is one of my old ones. You need to get one for your team from [here](https://secure.meetup.com/meetup_api/key/) - obviously, you'll have to be logged into meetup.com to get the key.
+Plug in your key whereever most relevant in `app.py` and run the above command again.
+
+This will start a [web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) on port 5000.
 Next load up http://locahost:5000/rsvps in your web browser
 
 ### Feature 1: Read app.py
