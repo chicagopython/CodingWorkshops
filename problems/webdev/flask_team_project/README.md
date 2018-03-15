@@ -98,7 +98,14 @@ The reason is there is a string in the `app.py` file that allows meetup.com to i
 Plug in your key whereever most relevant in `app.py` and run the above command again.
 
 This will start a [web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) on port 5000.
-Next load up http://locahost:5000/rsvps in your web browser
+Next load up http://locahost:5000/rsvps in your web browser. 
+
+This will show you the list of people who RSVPed for a previous meetup.
+Goto tonight's meetup page and get the meetup id from the url.
+
+   https://www.meetup.com/_ChiPy_/events/244121900/
+   
+The last section of the url is the `event_id`.
 
 ### Feature 1: Read app.py
 `app.py` is the script is where the magic happens.
