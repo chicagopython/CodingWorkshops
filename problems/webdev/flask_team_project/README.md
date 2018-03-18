@@ -87,12 +87,25 @@ On Windows, run the following
 
 [![asciicast](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png)](https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj)
 
+### Feature 0: run app.py
 With your environment now set up run
 
     flask run
 
-This will start a web server on port 5000.
-Next load up http://locahost:5000/rsvps in your web browser
+And you'll see 🔥.
+
+The reason is there is a string in the `app.py` file that allows meetup.com to identify who is trying to get data from them. It is called the API key. The one currently in the code is one of my old ones. You need to get one for your team from [here](https://secure.meetup.com/meetup_api/key/) - obviously, you'll have to be logged into meetup.com to get the key.
+Plug in your key whereever most relevant in `app.py` and run the above command again.
+
+This will start a [web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server) on port 5000.
+Next load up http://locahost:5000/rsvps in your web browser. 
+
+This will show you the list of people who RSVPed for a previous meetup.
+Goto tonight's meetup page and get the meetup id from the url.
+
+   https://www.meetup.com/_ChiPy_/events/244121900/
+   
+The last section of the url is the `event_id`.
 
 ### Feature 1: Read app.py
 `app.py` is the script is where the magic happens.
@@ -108,6 +121,22 @@ Lets start at the routes:
 
 Discuss among the team how render_template function is used in rsvps and teams
 function.
+
+Two useful tools are pretty print and `pdb`
+
+#### Pretty print
+
+    >> from pprint import pprint as pp
+    >> pp(member_rsvps)
+
+This will give you a better view of what the function `get_names()` returns.
+
+#### pdb
+Python comes with a debugger `pdb`. Here's a [cheat sheet](https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf)
+
+You can stick the following line anywhere in the code and make it halt so that you can better inspect the data and flow.
+
+    import pdb; pdb.set_trace()
 
 ### Feature 2: Show profile images in rsvps
 Make changes to rsvps.html (inside templates) to show images of next to the
