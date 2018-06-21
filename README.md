@@ -2,46 +2,30 @@
 
 Welcome to the Python Projects Night organized by Chicago Python User Group or ChiPy. 
 Here you will find python challenges that we solve together as a groups every third 
-Thursday of the month at 6:30 pm at Braintree's Chicago Office. 
+Thursday of the month at 6:30 pm at Braintree's Chicago Office. This repository has the
+collection of the Challenge problems that we solve at Project Nights.  
 
 [Talk to us on Slack](https://chipy.slack.com/messages/C4SRS5G3B/details/)
 
 ## Code of Conduct
 [Here](http://www.chipy.org/pages/conduct/) is our code of conduct.
 
-We offer two tracks - self-paced solo-project and team-project.
 
-## Solo Projects
-If you are planning to work on your own pace on your own project, this would
-be the track of your choice. If you need any help, there are generally plenty
-of helpful folks around to help you out. Also we would love it if you can
-help some one who is looking for help! Enjoy some pizza and beverage, talk to
-other pythonistas and have a good time!
-
-Take a look at the previous projects, if you are looking for projects on
-webdev, data science, or simple apps using python.
+## Contributors
+Thanks to those who come down Python Project Night every month. Here is the list of folks who have
+spent their time in bringing this repository to you.
+* [Nik](https://github.com/sharma7n)
+* [Hector Rios](https://github.com/hectron)
 
 
-## Team Projects
-These projects are meant for those who are familiar with Python Syntax and 
-looking to take their learning to the next step. You will be a part of group
-of 4 and solve a problem within 1 hour using Python. Each team would be using 
-2 laptops - one for coding and one for research. Every team member would have 
-15 minutes of keyboard time. After 15 minutes, the control of the keyboard 
-would switch to the next team member. At the end of the hour, we will
-select a team to show their solution to us.
+## Challenge Problems
+Challenge problems are fun, hands-on coding exercises covering a variety of topics -- such as pure problem solving, web development, and data science. The participants of Project Night are assigned to teams of four, and then solve the problem together in an hour. Teams are designed to have diverse experience levels, giving team members equal opportunity to learn and share ideas.
 
 
-### Upcoming Team Projects
-#### Py101
-##### September 21, 2017, 6:30 pm
-##### RSVP [here](https://www.meetup.com/_ChiPy_/events/239174106/)
-
-
-### What should you bring
+### What you need
 * Wi-fi powered laptop, power chord
 * Python: 3.5 (We can not guarantee help if you are using Python 2.7)
-* Text editor: Atom, Sublime Text
+* Text editor: Atom, Sublime Text, Visual Studio Code
 * OS: GNU/Linux. OS X, Windows
 
 
@@ -100,4 +84,8 @@ profile data?
 Diversity in tech communities has been a widely addressed topic. As one of the most active tech community in the world, in this exercise we would try to measure some aspects of diversity in tech community. We will use image recognition on the meetup.com profile pictures of the members of ChiPy user group and determine determine how diverse our attendees are. Then we will compare the same with other tech groups in the city and around the world.
 
 [Solve it!](problems/data_science/diversif.ai.ipynb)
+
+#### Introduction to Text Analysis with sklearn
+This is a gentle introduction to text analysis with sklearn. We build a recommnedation system that predicts
+Pycon conference talks based on previous history of Pycon talks. 
 
