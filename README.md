@@ -14,9 +14,10 @@ collection of the Challenge problems that we solve at Project Nights.
 ## Contributors
 Thanks to those who come down Python Project Night every month. Here is the list of folks who have
 spent their time in bringing this repository to you.
+
 * [Nik](https://github.com/sharma7n)
 * [Hector Rios](https://github.com/hectron)
-
+* [Tathagata](https://github.com/tathagata)
 
 ## Challenge Problems
 Challenge problems are fun, hands-on coding exercises covering a variety of topics -- such as pure problem solving, web development, and data science. The participants of Project Night are assigned to teams of four, and then solve the problem together in an hour. Teams are designed to have diverse experience levels, giving team members equal opportunity to learn and share ideas.
