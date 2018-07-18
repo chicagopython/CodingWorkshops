@@ -1,4 +1,0 @@
-pytest==3.6.3
-pytest-cov==2.5.1
-pytest-xdist==1.19.1
-pytest-flake8==1.0.1

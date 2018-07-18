@@ -1,121 +1,112 @@
-# Intro to PyTest
-This is a gentle introduction to testing with pytest.
-We will use the problem that we have seen before
-at project night, [how to group people into teams of 4](https://github.com/chicagopython/CodingWorkshops/blob/master/problems/py101/python_team_project).
+**Introduction to PyTest and Continuous Integration**
 
+[![Build Status](https://travis-ci.org/chipycodingworkshop/CodingWorkshops.svg?branch=develop%2Fci)](https://travis-ci.org/chipycodingworkshop/CodingWorkshops)
 
-team_organizer.py is simplified implementation of the
-problem.
+Objective:
 
-test_team_organizer.py is the test for the module.
-It has one test implemented to show you what a unit
-test in pytest looks like. You Will need to implement
-the rest of the tests. Feel free to add more tests.
+- Introduction to unit testing with pytest
+- How to setup continuous integration with Github and Travis-CI
 
-Documentation: https://docs.pytest.org/en/latest/
+<!-- TOC -->
 
-# Installation instruction
-This exercise is Python 3 only. Follow instructions on the
-main wiki to see how to install python3.
+- [1. Setup Instructions](#1-setup-instructions)
+    - [1.1. Git and Github](#11-git-and-github)
+    - [1.2. Travis setup](#12-travis-setup)
+    - [1.3. Python](#13-python)
+- [2. Quick Git command refresher](#2-quick-git-command-refresher)
+- [3. Exercise 0: Project Setup](#3-exercise-0-project-setup)
+    - [3.1. `team_organizer.py`](#31-team_organizerpy)
+    - [3.2. `test_team_organizer.py`](#32-test_team_organizerpy)
+    - [3.3. `Makefile`](#33-makefile)
+    - [3.4. `Pipfile` and `Pipfile.lock`](#34-pipfile-and-pipfilelock)
+    - [3.5. `pytest.ini`](#35-pytestini)
+    - [3.6. `travis.yml`](#36-travisyml)
 
+<!-- /TOC -->
 
-First create a virtual environment
+# 1. Setup Instructions
 
-    python3 -m venv venv
-    source venv/bin/activate
+## 1.1. Git and Github
 
+After completing the above steps you should have a github account and be able to push
+your local changes to this repository to github.
 
-To install the requirements run
+- Follow the setup steps described [here](https://help.github.com/articles/set-up-git/)
+- Follow the steps described in [fork a repo](https://help.github.com/articles/fork-a-repo
+- Now fork [this repository](https://github.com/chicagopython/CodingWorkshops) by clicking the fork button
 
-    pip3 install -r requirements.txt
+## 1.2. Travis setup
 
-This will install pytest and other required packages.
+In this section we will set up a Continuous Integration pipeline
+with Travis-ci.
 
-# Run the program
-Start by running
+- First, head over to [Travis-CI.org](https://travis-ci.org/.)
+- Sign in with your Github account, and accept the terms and conditions.
+- On success, you should be at your profile page that lists the CodingWorkshop repository.
+- Once you have located the repo, toggle the button next to the repository to enable pipeline travis CI
 
-      python team_organizer.py
+If you have multiple repositories, you will have to search for the repository.
 
-This will drop you to the program's interactive prompt.
-Below is a sample interaction where users named a, b, c, 
-d, e and f are added using the add command.
-Following that, we run the print command where the users
-are grouped in to max of size four where two users have
-written less lines of code than the others.
+## 1.3. Python
 
-     t (master *) testing $ python team_organizer.py 
-     Welcome to Chicago Python Project Night Team Organizer
-     org> help
-     help
-     
-     Documented commands (type help <topic>):
-     ========================================
-     add  help  print
-     
-     Undocumented commands:
-     ======================
-     exit
-     
-     org> help add
-     help add
-     Adds a new user. Needs Name, slackhandle, number of lines
-     org> add a @a 100
-     add a @a 100
-     org> add b @b 200
-     add b @b 200
-     org> add c @c 300
-     add c @c 300
-     org> add d @d 400
-     add d @d 400
-     org> add e @e 500
-     add e @e 500
-     org> add f @f 50
-     add f @f 50
-     org> print
-     print
-     ['f, a, e, d']
-     b, c
-     org> 
-     
+This project has made no attempt to be compatible with Python 2.7. 😎
 
+Recommended version: Python 3.6
 
-# Running the tests
+# 2. Quick Git command refresher
 
-Simply run pytest at the command prompt.
-This will run the tests in the test_team_organizer.py
+Below are the few most used git commands
 
-By default pytest will capture everything that goes into
-stdout, so that it can have better control over what is
-printed out. If you are adding print statements to see
-what values your variables have run
+    git checkout develop/ci      # checkout to develop/ci branch
+    git checkout -b feature/cool # crate a new branch feature/cool
+    git add -u                   # stage all the updates for commit
+    git commit -am "Adding changes and commiting with a comment"
+    git push origin develop/ci   # push commits to develop/ci branch
 
-    pytest -s
+# 3. Exercise 0: Project Setup
 
-While we do not go into much depth of what can be achieved by
-pytest (coming soon to a future project night), here is one cool 
-feature you will enjoy.
+By this step you should have the forked version of CodingWorkshop
+repository in your machine. Lets take the time to look at the structure of this
+project. All code is located under `/problems/py101/testing` directory.
+Make sure you are in this directory for the remainder of this project.
 
-Say you have hundreds of tests (unlikely for this
-exercise), you can easily parallelize those tests by
+Run `pwd` (`cwd` for Windows) on the command prompt to find out which directory you
+are on.
 
-    pytest -n3
+Your output should end in `problems/py101/testing` and contain the files described
+below.
 
-Where 3 is the number of cpus you want to distribute
-your tests to.
+## 3.1. `team_organizer.py`
 
+This file is a simplified implementation of the problem of grouping the project
+night attendees into teams of four based on the number of lines of code they have
+written such that two team members have more lines of code than the other.
+This is the system under test.
 
-# Coverage and Styleguide
-Once you run pytest, it will show you coverage information
-about your code. Also if your code has some styling issue
-pytest will fail until you fix your code to be pycodestyle
-compliant.
+## 3.2. `test_team_organizer.py`
 
-If you want to disble these checking, you can edit
-the pytest.ini file and remove the --flake8 or --cov options
+This file is the test for the above module written using Pytest.
 
-# TODO 
-Add virtual env for windows
+These are two files mentioned above are the only two files that we will be making
+modifications to for this project.
 
+## 3.3. `Makefile`
 
-goto travis-ci.org
-sign in with Github
+This file contains the commands that are required building the project.
+You can run `make help` to see what are the options.
+
+## 3.4. `Pipfile` and `Pipfile.lock`
+
+These two files are used by `pipenv` to create a virtual enviornment that
+isolates all the dependencies of this project from other python projects in your computer.
+Learn more about [pipenv](https://docs.pipenv.org/).
+
+## 3.5. `pytest.ini`
+
+This file contains the configuration for `pytest`.
+
+## 3.6. `travis.yml`
+
+In addition to all the files in this directory, located at the root of the repository,
+is a file called `.travis.yml`. This is used by the continuous intergration tool travis-ci.
+This contains the information on how to build this python project.
