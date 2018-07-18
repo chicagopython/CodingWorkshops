@@ -115,3 +115,7 @@ the pytest.ini file and remove the --flake8 or --cov options
 
 # TODO 
 Add virtual env for windows
+
+
+goto travis-ci.org
+sign in with Github

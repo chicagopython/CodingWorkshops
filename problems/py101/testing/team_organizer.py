@@ -33,7 +33,8 @@ class Organizer:
         else:
             self.d.append(p)
 
-    def _names(self, persons):
+    @staticmethod
+    def _names(persons):
         return ', '.join(p.name for p in persons)
 
     def teams(self):
