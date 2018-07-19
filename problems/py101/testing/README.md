@@ -65,6 +65,8 @@ In this section we will set up a Continuous Integration pipeline with Travis-ci.
 - On success, you will be landing on your profile page that lists the CodingWorkshop repository
 - Once you have located the repo, toggle the button next to the repository to enable travis CI
 
+![travi-build-img](EnableTravisCI.png)
+
 If you have multiple repositories, you will have to search for the repository by typing in the name
 of the repository (CodingWorkshop) in the search bar on the dashboard page.
 
@@ -83,6 +85,10 @@ Below are the few most used git commands
     git add -u                   # stage all the updates for commit
     git commit -am "Adding changes and commiting with a comment"
     git push origin master       # push commits to develop/ci branch
+
+Note for this exercise, we will be working on the master branch directly. However,
+that is NOT the best practice. Branches are cheap in git, so a new feature or fix
+would first go to a branch, get tested, code reviewed and finally merged to master.
 
 ## 1.4. Exercise 0: Project Setup
 
@@ -112,7 +118,7 @@ This is the system under test.
 
 This file is the test for the above module written using Pytest.
 
-These are two files mentioned above are the only two files that we will be making
+These two files mentioned above are the only two files that we will be making
 modifications to for this project.
 
 ### 1.4.3. `Makefile`
@@ -138,8 +144,18 @@ This contains the information on how to build this python project.
 
 ### 1.4.8. Test your setup is working
 
-Just make a small edit on this file, and `git push origin master` the changes to your repository.
-If travis-ci.org gets triggered and is all green for this push, congratulations - you are now
-ready to dive in.
+Just make a small edit on this file (README.md), commit and push the changes.
+
+    git commit -am "Demo commit to check everything is working"
+    git push origin master
+
+If travis-ci.org gets triggered and is all green, your push has successfully ran through
+the linting and testing pipeline.
+
+To display that badge of honor, click on the build button next on the travis page and select
+Markdown from the second dropdown. Copy the markdown code displayed and add it to the top
+of this file (README.md).
+
+![travi-build-img](travis-build-img.png)
 
 If you run into issues, [ask your question on slack](https://chipy.slack.com/messages/C093F7W8P/details/)
