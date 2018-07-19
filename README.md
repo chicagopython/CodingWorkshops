@@ -11,7 +11,7 @@
         - [1.4.1. Python101](#141-python101)
             - [1.4.1.1. Python Koans](#1411-python-koans)
             - [1.4.1.2. Python Team Projects](#1412-python-team-projects)
-            - [1.4.1.3. Intro to PyTest and Continuous Integration with Travis-CI](#1413-intro-to-pytest-and-continuous-integration-with-travis-ci)
+            - [1.4.1.3. Intro to PyTest and Travis-CI](#1413-intro-to-pytest-and-travis-ci)
         - [1.4.2. WebDev](#142-webdev)
             - [1.4.2.1. Flask Team Projects](#1421-flask-team-projects)
             - [1.4.2.2. Flask Collage](#1422-flask-collage)
@@ -78,7 +78,7 @@ The organizers of Project Nights need your help! Grouping attendees for Project 
 
 [Solve it!](problems/py101/python_team_project)
 
-#### 1.4.1.3. Intro to PyTest and Continuous Integration with Travis-CI
+#### 1.4.1.3. Intro to PyTest and Travis-CI
 
 This is an introduction to testing using pytest that uses the same problem as above of grouping project night attendees into teams of 4.
 
