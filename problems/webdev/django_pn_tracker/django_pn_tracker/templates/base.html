@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>{% load staticfiles %}
+<html lang="en">
+ <head>
+ <link rel="SHORTCUT ICON" href="{% static 'images/favicon.ico' %}">
+  <title>ChiPy Python Project Night{% block title %}- HOME{% endblock title %}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="keywords" content="Chipy, Python, Project Night, Chicago" />
+  <meta name="description" content="ChiPy Python Project Night" />
+  <meta name="author" content="Joe Jasinski" />
+
+  <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+  <link rel="stylesheet" href="{% static 'css/master.css' %}" type="text/css" />
+  {% block extra_head %}{% endblock extra_head %}
+ </head>
+ <body>
+
+ <header class="headerdark">
+ 	<h1 class="name"><a href="/">Home</a></h1>
+
+  <nav class="desktop">
+    <ul class="menu_items closed">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'challenges_list' %}">Challenges List</a>
+
+    </ul>
+  </nav>
+
+ </header>
+ <div class="content">
+ {% block content %}
+
+
+ {% endblock content %}
+ </div>
+ <footer>Python Project Night</footer>
+ </body>
+
+
+</html>

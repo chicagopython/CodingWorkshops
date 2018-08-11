@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Attendee List</h2>
+
+<table border=1>
+    <tr><td>Date</td>
+        <td>Name</td>
+        <td>Challenge</td>
+        <td>Skills</td>
+    </tr>
+
+{% for attendee in attendees %}
+    <tr><td>{{ attendee.date }}</td>
+        <td>{{ attendee.name }}</td>
+        <td>{{ attendee.challenge }}</td>
+        <td>{{ attendee.skills }}</td>
+    </tr>
+
+{% endfor %}
+</table>
+
+{% endblock content %}
