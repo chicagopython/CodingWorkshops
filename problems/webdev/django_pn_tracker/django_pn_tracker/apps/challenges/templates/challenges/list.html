@@ -3,11 +3,14 @@
 {% block content %}
 <h2>Attendee List</h2>
 
+<a href="{% url 'challenges_add' %}">Add</a>
+
 <table border=1>
     <tr><td>Date</td>
         <td>Name</td>
         <td>Challenge</td>
         <td>Skills</td>
+        <td>Actions</td>
     </tr>
 
 {% for attendee in attendees %}
@@ -15,9 +18,10 @@
         <td>{{ attendee.name }}</td>
         <td>{{ attendee.challenge }}</td>
         <td>{{ attendee.skills }}</td>
+        <td><a href="{% url 'challenges_edit' attendee.id %}">Edit</a> - 
+            <a href="{% url 'challenges_delete' attendee.id %}">Delete</a></td>
     </tr>
 
 {% endfor %}
 </table>
-
 {% endblock content %}
