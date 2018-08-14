@@ -1,27 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Attendee List</h2>
+<div class="col-md-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-line-chart"></i> Attendee List <a class="pull-right fa fa-gear" href="#" style="text-decoration:none;"></a></h3>
+        </div>
+        <div class="panel-body">
+            <a class="btn btn-success" href="{% url 'challenges_add' %}" role="button">Add</a>
+            <table class="table" id="grid">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Participant Name</th>
+                        <th>Challenge</th>
+                        <th>Skill Level</th>
+                        <th>Actions</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    {% for attendee in attendees %}
+                    <tr>
+                        <td>{{ attendee.date }}</td>
+                        <td>{{ attendee.name }}</td>
+                        <td>{{ attendee.challenge }}</td>
+                        <td>{{ attendee.skills }}</td>
+                        <td>
+                            <a href="{% url 'challenges_edit' attendee.id %}">
+                                <i class="fa fa-pencil"></i> Edit
+                            </a>
 
-<a href="{% url 'challenges_add' %}">Add</a>
-
-<table border=1>
-    <tr><td>Date</td>
-        <td>Name</td>
-        <td>Challenge</td>
-        <td>Skills</td>
-        <td>Actions</td>
-    </tr>
-
-{% for attendee in attendees %}
-    <tr><td>{{ attendee.date }}</td>
-        <td>{{ attendee.name }}</td>
-        <td>{{ attendee.challenge }}</td>
-        <td>{{ attendee.skills }}</td>
-        <td><a href="{% url 'challenges_edit' attendee.id %}">Edit</a> - 
-            <a href="{% url 'challenges_delete' attendee.id %}">Delete</a></td>
-    </tr>
-
-{% endfor %}
-</table>
+                            <a href="{% url 'challenges_delete' attendee.id %}">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="pagination-bar">
+                {{ pagination.links }}
+                {{ pagination.info }}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
