@@ -113,6 +113,17 @@ a. Several tables already exist, but we want to create a new table called `Atten
 
 This is a little bit of Django magic. Under the hood Django is automatically generating the SQL commands necessary to update your database. You can see the actual underlying commands in `apps/challenges/migrations`, where a file of commands is created each time we run makemigrations.
 
+Normally you would see a message like:
+
+    Migrations for 'challenges':
+      django_pn_tracker/apps/challenges/migrations/0002_auto_20180816_1445.py
+        - <actions here>
+        ...
+
+   However, since the table for our new model actually already exists in db.sqlite3 (purely for the sake of having example records for later steps), if everything is working correctly so far you should see:
+
+    No changes detected
+
    In order to actually make our changes, run:
 
     > ./manage.py migrate
