@@ -26,7 +26,7 @@ By the end of this challenge, you'll have created a web app that looks something
 
     > cd problems/webdev/django_pn_tracker
 
-3. Install our python package requirements:
+4. Install our python package requirements:
 
     > pip install -r requirements.txt
 
@@ -84,6 +84,7 @@ To help visualize the locations of the file, here's the full file tree:
 
 ### Step 0: Run the app as is
 Before we dig in, let's see what the app currently looks like. This'll also confirm that install/setup went as planned. To run the app locally:
+
     > ./manage.py runserver
 
 Then open the link provided in the terminal: http://127.0.0.1:8000/
