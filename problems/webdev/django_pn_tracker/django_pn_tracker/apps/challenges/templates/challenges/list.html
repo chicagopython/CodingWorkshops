@@ -1,0 +1,34 @@
+'{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="panel panel-'primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-line-chart"></i> Attendee List <a class="pull-right fa fa-gear" href="#" style="text-decoration:none;"></a></h3>
+        </div>
+        <div class="panel-body">
+            <a class="btn btn-success" href="{% url 'challenges_add' %}" role="button">Add</a>
+            <table class="table" id="grid">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Participant Name</th>
+                        <th>Challenge</th>
+                        <th>Skill Level</th>
+                        <th>Actions</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    <!-- ###################################
+                    # Records from our `attendees` go here #
+                    #####################################-->
+                </tbody>
+            </table>
+            <div class="pagination-bar">
+                {{ pagination.links }}
+                {{ pagination.info }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
