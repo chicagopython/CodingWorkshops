@@ -3,6 +3,10 @@ In this project we will be building a CRUD-style web app using Django and SQLite
 ## The Project
 With growing Project Night attendance, ChiPy would like to better keep track of Challenge participation, and the CSV sign up sheets just aren't cutting it. In this project we'll upgrade things a notch by creating a web app (using Django) to keep track of our data (in a basic SQLite3 database). The goal of our app is to have an easy way to enter and view our data, all while maintaining attendee's privacy. To save some time, the django project has already been created, as well as the framework for thee structure for the app we'll be working on. To learn how to set up a Django app from scratch, check out https://docs.djangoproject.com/en/2.1/intro/tutorial01/#creating-a-project.
 
+By the end of this challenge, you'll have created a web app that looks something like this:
+
+![screen shot 2018-08-15 at 12 48 46 pm](https://user-images.githubusercontent.com/19669890/44185211-951ebd80-a0d8-11e8-8d7f-515a0a99b2bf.png)
+
 ## Setup
 1. Clone the project:
 
