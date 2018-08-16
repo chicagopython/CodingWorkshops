@@ -78,6 +78,12 @@ To help visualize the locations of the file, here's the full file tree:
 └── setup.cfg
 ```
 
+### Step 0: Run the app as is
+Before we dig in, let's see what the app currently looks like. This'll also confirm that install/setup went as planned. To run the app locally:
+    > ./manage.py runserver
+
+Then open the link provided in the terminal: http://127.0.0.1:8000/
+
 ### Step 1: Configure settings
 While our project already has a lot written, we need to configure settings for our new app. Django projects store these settings in `settings.py` by default. 
 
@@ -117,12 +123,12 @@ Now that we've created our table, we want to create a page to view our new table
 **b. Create the new `challenge_list` view in `views.py`** for our new page. Django has the concept of “views” to encapsulate the logic responsible for processing a user’s request and for returning the response. Syntactically, a view is just a regular python function (or class) that will be called when we travel to the associated url. To learn more about writing views, check out: https://docs.djangoproject.com/en/2.1/topics/http/views/ . In the case of challenge_list, use the following variable names:
 
 * `template_name` as the variable that points to `challenges/list.html`,
-* `attendees` should be all of our AttendeeInfo objects, and
+* `attendees` should be all of our AttendeeInfo objects (see https://docs.djangoproject.com/en/2.1/topics/db/queries/#retrieving-objects), and
 * `context` should be a dictionary mapping the string `"attendees"` to our `attendees` variable. 
 
 The names selected are only important to match the templates that we've already started for you.
 
-**c. Create a template.** Templates are the layers of your app that create the structure of the pages visible to users. Django uses a templating language that's very similar to HTML plus some interactivity with our python code, mostly via syntax surrounded by curly braces. Instead of starting totally from scratch, the template for our record listing is already started in `list.html`, so we'll just fill in the missing section (as indicated with comments). To learn more about template basics (and see some syntax examples) check out: https://docs.djangoproject.com/en/2.1/topics/templates/ .
+**c. Create a template.** Templates are the layers of your app that create the structure of the pages visible to users. Django uses a templating language that's very similar to HTML plus some interactivity with our python code, mostly via syntax surrounded by curly braces. Instead of starting totally from scratch, the template for our record listing is already started in `list.html`, so we'll just fill in the missing section (as indicated with comments). To learn more about template basics (and see some syntax examples) check out: https://docs.djangoproject.com/en/2.1/ref/templates/language/#templates .
 
 **d. Add a link to our new view in our main navigation bar.** This can be done in the body of `base.html`.
 
@@ -133,9 +139,9 @@ Now we can view our new table, but there's nothing in it! Let's create a way to 
 
 **b. Create forms.** Set up `AttendeeEditForm` and `ConfirmForm` in `forms.py`. We will reference these in our views. Learn more about model forms here: https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/ , and more about fields here: https://docs.djangoproject.com/en/2.1/ref/forms/fields/ .
 
-**c. Create the three new views in views.py for our new pages.** Mimic the template_name, attendees, and context variable names and style from challenge_list. Use the variable form to instantiate the form object. For example, paste this into challenge_add: `form = forms.AttendeeEditForm()`
+**c. Create the three new views in views.py for our new pages.** Mimic the template_name, attendees, and context variable names and style from challenge_list. Use the variable form to instantiate the form object. For example, paste this into challenge_add: `form = forms.AttendeeEditForm()` . See https://docs.djangoproject.com/en/2.1/topics/forms/#the-view and for help.
 
-**d. Create templates.** These are already started for you in `edit.html` and `delete.html`, so just fill in the missing section (as indicated). Note that add and edit will both use `edit.html`. Bonus hint: Are the edit and delete forms really different..?
+**d. Create templates.** These are already started for you in `edit.html` and `delete.html`, so just fill in the missing section (as indicated). Note that add and edit will both use `edit.html`. Bonus hint: Are the edit and delete forms really different..? See https://docs.djangoproject.com/en/2.1/topics/forms/#the-template for help.
 
 **e. Add links.** Add links for edit and delete in a new column in the existing table (requires editing `list.html` again).
 
@@ -146,6 +152,6 @@ Now that we've created our MVP, let's test it out by adding records for ourselve
 You've seen how to create a form and have a couple of example templates you've already worked with. Now it's time to do one from scratch. Create a form to add challenge records to the Challenge table. You will need a new template in the same folder as our delete.html, edit.html, and list.html. You'll also need to create a new form in forms.py. Lastly we'll need a way to get to our page to add a challenge - let's put it on the main navigation bar next to Challenges List (again in the body of base.html)
 
 ### Step 6: Add login requirements so our app isn't open to the world.
-After all, we'll have participants names and experience levels stored - that's sensitive information.
-
-See https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators to get started.
+After all, we'll have participants names and experience levels stored - that's sensitive information. You're on your own again! If you need help:
+* https://docs.djangoproject.com/en/2.1/topics/auth/default/#the-login-required-decorator
+* https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
