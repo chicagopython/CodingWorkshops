@@ -2,16 +2,17 @@ from django import forms
 from . import models
 
 
-# Learn about Django Model forms:
-# https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/
-# Learn about Django form fields:
-# https://docs.djangoproject.com/en/2.1/ref/forms/fields/
-class AttendeeEditForm(forms.ModelForm):
+########################################
+# Fill in all ###s in the forms below. #
+# Uncomment the forms when complete.   #
+########################################
 
-    class Meta:
-        fields = ['name', 'skills', 'challenge', 'date']
-        model = models.AttendeeInfo
+# class AttendeeEditForm(forms.ModelForm):
+
+#     class Meta:
+#         fields = ###
+#         model = ###
 
 
-class ConfirmForm(forms.Form):
-    pass
+# class ConfirmForm(forms.Form):
+#     pass

@@ -27,8 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
+#############################################################
+# Add 'django_pn_tracker.apps.challenges' to INSTALLED_APPS #
+#############################################################
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django_pn_tracker.apps.challenges',
+    'django_pn_tracker.apps.challenges'
 ]
 
 MIDDLEWARE = [
@@ -74,38 +75,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_pn_tracker.wsgi.application'
 
+##############################
+# Add database settings here #
+##############################
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases for help
 
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
-# Password validation
+################################
+# Add password validation here #
+################################
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
-# AUTH_PASSWORD_VALIDATORS = [
-#     {
-#         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-#     },
-#     {
-#         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-#     },
-#     {
-#         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-#     },
-#     {
-#         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-#     },
-# ]
-
-
-# Internationalization
+################################
+# Add Internationalization here #
+################################
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
@@ -123,7 +105,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
 
 STATIC_PATH = os.path.abspath(
     os.path.join(BASE_DIR, 'django_pn_tracker', 'static'))

@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+'{% extends "base.html" %}
 
 {% block content %}
 <div class="col-md-12">
-    <div class="panel panel-primary">
+    <div class="panel panel-'primary">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-line-chart"></i> Attendee List <a class="pull-right fa fa-gear" href="#" style="text-decoration:none;"></a></h3>
         </div>
@@ -19,23 +19,9 @@
                     <tr>
                 </thead>
                 <tbody>
-                    {% for attendee in attendees %}
-                    <tr>
-                        <td>{{ attendee.date }}</td>
-                        <td>{{ attendee.name }}</td>
-                        <td>{{ attendee.challenge }}</td>
-                        <td>{{ attendee.skills }}</td>
-                        <td>
-                            <a href="{% url 'challenges_edit' attendee.id %}">
-                                <i class="fa fa-pencil"></i> Edit
-                            </a>
-
-                            <a href="{% url 'challenges_delete' attendee.id %}">
-                                <i class="fa fa-trash"></i> Delete
-                            </a>
-                        </td>
-                    </tr>
-                    {% endfor %}
+                    <!-- ###################################
+                    # Records from our `attendees` go here #
+                    #####################################-->
                 </tbody>
             </table>
             <div class="pagination-bar">

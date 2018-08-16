@@ -20,7 +20,7 @@ class ChallengeTools(DateModelBase, models.Model):
 
     def __str__(self):
         return f"{self.name}"
-    
+
     class Meta:
         # learn about django model Meta options:
         # https://docs.djangoproject.com/en/2.1/ref/models/options/
@@ -37,19 +37,16 @@ class Challenge(DateModelBase, models.Model):
         return f"{self.name}"
 
 
-class AttendeeInfo(DateModelBase, models.Model):
-    date = models.DateTimeField()
-    name = models.CharField("Participant Name", max_length=128)
-    challenge = models.ForeignKey(
-        "challenges.Challenge", on_delete=models.CASCADE)
-    skills = models.IntegerField(
-        default=1,
-        # Learn about validators:
-        # https://docs.djangoproject.com/en/2.1/ref/validators/
-        validators=[
-            MaxValueValidator(10),
-            MinValueValidator(1)
-        ])
+########################################
+# Fill in all ###s in the model below. #
+# Uncomment the class when complete.   #
+########################################
 
-    def __str__(self):
-        return f"{self.challenge} {self.name}"
+# class AttendeeInfo(###, ###):
+#     date = ###
+#     name = ###
+#     challenge = ###(###, on_delete=models.CASCADE)
+#     skills = ###
+#
+#     def __str__(self):
+#         return f"{self.challenge} {self.name}"

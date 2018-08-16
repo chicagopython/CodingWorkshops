@@ -8,6 +8,9 @@ class ChallengeAdmin(admin.ModelAdmin):
     search_fields = ['name', 'description']
 
 
-admin.site.register(models.ChallengeTools) 
-admin.site.register(models.Challenge, ChallengeAdmin) 
-admin.site.register(models.AttendeeInfo)
+admin.site.register(models.ChallengeTools)
+admin.site.register(models.Challenge, ChallengeAdmin)
+
+##############################
+# Register AttendeeInfo here #
+##############################
