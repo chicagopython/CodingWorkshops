@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "*"
+prompt_toolkit = "*"
+peewee = "*"
+click = "*"
+
+[requires]
+python_version = "3.6"
