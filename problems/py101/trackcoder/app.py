@@ -1,3 +1,4 @@
+# hi!
 from __future__ import unicode_literals
 import sys
 
@@ -28,6 +29,7 @@ def initialize():
     """Connect to database, create tables if they don't exist"""
     db.connect()
     db.create_tables([ToDo], safe=True)
+
 
 def parse(input):
     """
