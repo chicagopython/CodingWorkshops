@@ -17,15 +17,15 @@
     - [1.7. Exercise 2: Run the program](#17-exercise-2-run-the-program)
     - [1.8. Exercise 3: Fix the help message](#18-exercise-3-fix-the-help-message)
         - [1.8.1. Interactive mode](#181-interactive-mode)
-    - [1.9. Exercise 3: Run in interactive mode](#19-exercise-3-run-in-interactive-mode)
+    - [1.9. Exercise 4: Run in interactive mode](#19-exercise-4-run-in-interactive-mode)
     - [1.10. Exercise 4: Run in non-interactive mode](#110-exercise-4-run-in-non-interactive-mode)
         - [1.10.1. Optional: For non-windows users only](#1101-optional-for-non-windows-users-only)
-    - [1.11. Exercise 6: Error handling](#111-exercise-6-error-handling)
-    - [1.12. Exercise 5: Enhance the show command](#112-exercise-5-enhance-the-show-command)
-    - [1.13. Exercise 6: Add a field for task complete or not](#113-exercise-6-add-a-field-for-task-complete-or-not)
-    - [1.14. Exercise 7: Enhance the summary](#114-exercise-7-enhance-the-summary)
-    - [1.15. Exercise 8: Hashtags](#115-exercise-8-hashtags)
-    - [1.16. Exercise 9: Add a field for effectiveness](#116-exercise-9-add-a-field-for-effectiveness)
+    - [1.11. Exercise 5: Error handling](#111-exercise-5-error-handling)
+    - [1.12. Exercise 6: Enhance the show command](#112-exercise-6-enhance-the-show-command)
+    - [1.13. Exercise 7: Add a field for task complete or not](#113-exercise-7-add-a-field-for-task-complete-or-not)
+    - [1.14. Exercise 8: Enhance the summary](#114-exercise-8-enhance-the-summary)
+    - [1.15. Exercise 9: Hashtags](#115-exercise-9-hashtags)
+    - [1.16. Exercise 10: Add a field for effectiveness](#116-exercise-10-add-a-field-for-effectiveness)
 
 <!-- /TOC -->
 
@@ -150,7 +150,9 @@ From the `/problems/py101/trackcoder` directory, run
 - Which packages got installed?
 - Which version of python is getting used?
 
-Skip this exercise for Windows.
+Skip this exercise for Windows. Install the dependencies using
+
+    pip install prompt_toolkit Click peewee
 
 ## 1.7. Exercise 2: Run the program
 
@@ -221,7 +223,7 @@ The `show` command allows listing of all the `Task`-s added till now.
 For this exercise you need to update add helpful messages that will summarize what each
 of the options for `app.py` stand for.
 
-## 1.9. Exercise 3: Run in interactive mode
+## 1.9. Exercise 4: Run in interactive mode
 
     python app.py -i
 
@@ -259,7 +261,7 @@ Then from your shell you can
 
 Add a similar shell alias for the `show` command.
 
-## 1.11. Exercise 6: Error handling
+## 1.11. Exercise 5: Error handling
 
 Currently we have two commands `add` and `show`. Lets say the user made a typo,
 or was creative while trying to input a command.
@@ -274,7 +276,7 @@ This results in the program crashing horribly with huge stack trace.
 Add error handling to handle cases when the program is unable to `parse` the input
 passed by the user.
 
-## 1.12. Exercise 5: Enhance the show command
+## 1.12. Exercise 6: Enhance the show command
 
 Enhance the show command to summarize the output by task category.
 Your summary should include how much time was spent on each of the task category.
@@ -282,7 +284,7 @@ Your summary should include how much time was spent on each of the task category
 As seen above, we are using sqlite3. You may choose to do your summary calculation
 using sql or write the logic in python.
 
-## 1.13. Exercise 6: Add a field for task complete or not
+## 1.13. Exercise 7: Add a field for task complete or not
 
 Next take a look at
 
@@ -309,12 +311,12 @@ Hint: Note the type of the field is boolean.
 You will need to modify the `parse`, `add` and the `main` function in order to complete
 this exercise.
 
-## 1.14. Exercise 7: Enhance the summary
+## 1.14. Exercise 8: Enhance the summary
 
 Enhance your summary function to show how many tasks are in progress and how many are complete.
 How you want to format the information is completely up to your choice.
 
-## 1.15. Exercise 8: Hashtags
+## 1.15. Exercise 9: Hashtags
 
 Now that you have enabled the flag to indicate if a task is complete or not, you
 can log a much fine grained prorgress of your tasks. You can tag your task with
@@ -331,7 +333,7 @@ Enhance the show command to optionally take a hashtag as parameter, that will fi
 tasks which have that hashtag. Accrodingly your summary should reflect only
 data relevant to that hashtag.
 
-## 1.16. Exercise 9: Add a field for effectiveness
+## 1.16. Exercise 10: Add a field for effectiveness
 
 Next its time to add a score to your efforts. Add a field to the `ToDo` class called effective,
 where you can record how effective a task was. An effective score is a number between 1 to 5,
