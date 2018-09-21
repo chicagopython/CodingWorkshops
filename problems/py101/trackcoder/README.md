@@ -186,7 +186,7 @@ Run each option with --help option to see what is the help message provided.
 Running `app.py` with `-i` - should start the app in interactive mode.
 Once in interactive mode, there are two commands `add` and `show`.
 
-The `add` command allows adding new a `Task`. The format is
+The `add` command allows adding a new `Task`. The format is
 
     % add b 10 first paragraph of first blog post
 
