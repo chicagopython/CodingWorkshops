@@ -31,29 +31,46 @@ def initialize():
 
 def parse(input):
     """
-        a b 10 first blog post 
+        a b 10 first blog post
         a c 10 finished cli
-        a p 120 
+        a p 120
     """
     input = input.strip()
-    cmd, task, mins, despcription = ['']*4
+    cmd, task, mins, description, done = ['']*5
     try:
-        cmd, task, mins, *description = input.split()
+        cmd, task, mins, *description, done = input.split()
         description = ' '.join(description)
-        return cmd, task, mins, description
-    except ValueError:
-        return input, task, mins, despcription
+        if done == 'False':
+            done = False
+        return cmd, task, mins, description, done
+    except Exception as e:
+        print('this is continuing to fail and we do not know why')
+        print(e)
+        return input, task, mins, description, done
 
 
 def add(**kwargs):
-    ToDo.create(task=kwargs['task'],
-                mins=kwargs['mins'],
-                description=kwargs['description'])
+    try:
+        ToDo.create(task=kwargs['task'],
+                    mins=kwargs['mins'],
+                    description=kwargs['description'],
+                    done=kwargs['done'])
+    except Exception:
+        print("Please check your ego")
+
 
 
 def show(**kwargs):
+    total = {}
     for t in ToDo.select():
         print(t.task, t.description, t.mins, t.done)
+        if t.task in total:
+            total[t.task]+=t.mins
+        else:
+            total[t.task]=t.mins
+    for k,v in total.items():
+        print('{} minutes spent {}'.format(v,k))
+
 
 
 def execute(**kwargs):
@@ -68,7 +85,7 @@ def execute(**kwargs):
 @click.command()
 @click.option('--interactive', '-i', help='needs some help text', is_flag=True, default=False)
 @click.option('--show', '-s', help='needs some help text', is_flag=True, default=False)
-@click.option('--add', '-a', nargs=3, type=(click.STRING, int, click.STRING), default=(None, None, None))
+@click.option('--add', '-a', nargs=4, type=(click.STRING, int, click.STRING, bool), default=(None, None, None, False))
 def main(interactive, add, show):
     initialize()
 
@@ -84,13 +101,13 @@ def main(interactive, add, show):
             except EOFError:
                 break
             else:
-                cmd, task, mins, description = parse(text)
-                execute(cmd=cmd, task=task, mins=mins, description=description)
+                cmd, task, mins, description, done = parse(text)
+                execute(cmd=cmd, task=task, mins=mins, description=description, done=done)
     elif show:
         execute(cmd='show')
     else:
         task, mins, description = add
-        execute(cmd='add', task=task, mins=mins, description=description)
+        execute(cmd='add', task=task, mins=mins, description=description, done=done)
     print('GoodBye!')
 
 
