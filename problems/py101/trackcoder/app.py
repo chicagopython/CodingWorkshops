@@ -31,18 +31,22 @@ def initialize():
 
 def parse(input):
     """
-        a b 10 first blog post 
+        a b 10 first blog post
         a c 10 finished cli
-        a p 120 
+        a p 120
     """
     input = input.strip()
-    cmd, task, mins, despcription = ['']*4
+    cmd, task, mins, description = ['']*4
     try:
         cmd, task, mins, *description = input.split()
+        mins += 0
         description = ' '.join(description)
         return cmd, task, mins, description
+    except TypeError:
+        pass
+        # return input, task, mins, description
     except ValueError:
-        return input, task, mins, despcription
+        return input, task, mins, description
 
 
 def add(**kwargs):
@@ -84,8 +88,11 @@ def main(interactive, add, show):
             except EOFError:
                 break
             else:
-                cmd, task, mins, description = parse(text)
-                execute(cmd=cmd, task=task, mins=mins, description=description)
+                try:
+                    cmd, task, mins, description = parse(text)
+                    execute(cmd=cmd, task=task, mins=mins, description=description)
+                except TypeError:
+                    print("Please check your input")
     elif show:
         execute(cmd='show')
     else:
