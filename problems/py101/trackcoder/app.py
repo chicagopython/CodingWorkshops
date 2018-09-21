@@ -36,13 +36,13 @@ def parse(input):
         a p 120 
     """
     input = input.strip()
-    cmd, task, mins, despcription = ['']*4
+    cmd, task, mins, description = ['']*4
     try:
         cmd, task, mins, *description = input.split()
         description = ' '.join(description)
         return cmd, task, mins, description
     except ValueError:
-        return input, task, mins, despcription
+        return input, task, mins, description
 
 
 def add(**kwargs):
