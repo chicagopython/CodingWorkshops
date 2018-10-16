@@ -2,7 +2,7 @@ Chipy's mentorship program is an extra-ordinary jounery for becoming a better de
 
 This project is the second of the three part series of building tools for the mentees for tracking time. The end goal of such a tool will be to aggregate anonymous data and analyze how does a typical mentee spend on blogging (b), coding (c), debugging (d), pair program (p) with mentor or other mentees.
 
-In this project we will be building a fully functional web dashboard for your effort tracking using Flask.
+In this project we will be building a fully functional web dashboard for tracking efforts using Flask.
 
 
 Short url for this page: **https://git.io/vdQj6** #TODO
@@ -15,8 +15,20 @@ Before you progress further, let's check if we are ready to solve this. You shou
 - Have written & ran programs in Python from the command line
 - Have some idea about lists, dictionaries and functions
 - Have created a virtual environment and installing packages with `pip`
-- You are able to run the program #TODO from the command line
 - You have read the [flask quick introduction](http://flask.pocoo.org/docs/0.12/quickstart/)
+
+
+In addition, you should have taken a look at [Part 1](https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/trackcoder) of this three part exercise.
+
+### Reference documents
+Reading these links before attending project night, would help you a lot by providing
+the background needed to work through the exercieses.
+
+- [Aggregation in Peewee ORM](http://docs.peewee-orm.com/en/latest/peewee/query_examples.html#aggregation)
+- [Flask Getting Started](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [Flask routing](http://flask.pocoo.org/snippets/57/)
+- [Flask Context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
+
 
 ### What is not supported
 This project is not tested using Jupyter Notebook, PyCharm,
@@ -34,6 +46,11 @@ comes from data captured by them using the command line tool built in Part
 and the effect of each task on the entire progress. Later in Part 3 we will use
 some data science approaches to analyze any patterns in this data.
 
+![](dashboard.gif)
+
+This is just a reference implementation to give you an idea of what a dashboard
+might look like, but you are not required to stick to this and encouraged to
+think of your own design. 
 
 ### Flask
 For building the web interface, we will be using Flask.
@@ -62,8 +79,8 @@ lightweight yet powerful.
 ### Files
 
 - `app.py` - Here you will find the basic skeleton of the flask app
-- `static/styles` - If you want to add static css and javascript, that goes here
-- `templates` - This file has the html template for showing rendering the data on the browser 
+- `static/styles` - If you want to add static css and javascript, that goes here. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/static/)
+- `templates` - This file has the html template for showing rendering the data on the browser. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/templates/) 
 
 ### Set up virtualenv
 If you are using Linux or OS X, run the following to create a new virtualenv
@@ -80,7 +97,6 @@ On Windows, run the following
     pip install -r requirements.txt
     set %FLASK_APP%=app.py
 
-#TODO asciinema
 
 ### Feature 0: run app.py
 With your environment now set up run
@@ -166,6 +182,9 @@ Some of the task descriptions have hashtags in them that allows quickly aggregat
 on content type in addition to task type. For example, multiple tasks could
 be on the content - for example "asyncio" or "data_science". By filteing on hashtag,
 we would be able to see task types and time spent on them.
+
+Hint: You might find [context processors]http://flask.pocoo.org/docs/1.0/templating/#context-processors
+useful.
 
 ### Exercise 7: Add tasks from UI
 
