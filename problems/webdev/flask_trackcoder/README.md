@@ -219,5 +219,5 @@ on content type in addition to task type. For example, multiple tasks could
 be on the content - for example "asyncio" or "data_science". By filteing on hashtag,
 we would be able to see task types and time spent on them.
 
-Hint: You might find [context processors]http://flask.pocoo.org/docs/1.0/templating/#context-processors
+Hint: You might find [context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
 useful.
