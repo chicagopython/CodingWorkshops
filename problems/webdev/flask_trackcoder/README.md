@@ -1,34 +1,36 @@
 <!-- TOC -->
 
-- [0.0.1. Is this project for you](#001-is-this-project-for-you)
-- [0.0.2. Reference documents](#002-reference-documents)
-- [0.0.3. What is not supported](#003-what-is-not-supported)
-- [0.0.4. Minimum Viable Product](#004-minimum-viable-product)
-- [0.0.5. Flask](#005-flask)
-- [0.0.6. Setup your environment](#006-setup-your-environment)
-    - [0.0.6.1. Get the source code](#0061-get-the-source-code)
-- [0.0.7. Files](#007-files)
-- [0.0.8. Set up virtualenv](#008-set-up-virtualenv)
-- [0.0.9. Feature 0: run app.py](#009-feature-0-run-apppy)
-- [0.0.10. Exercise 1: Shows the list of tasks that a mentee has added](#0010-exercise-1-shows-the-list-of-tasks-that-a-mentee-has-added)
-- [0.0.11. Exercise 2: Shows the list of tasks of a particular type](#0011-exercise-2-shows-the-list-of-tasks-of-a-particular-type)
-- [0.0.12. Exercise 3: Build a better UI](#0012-exercise-3-build-a-better-ui)
-- [0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types](#0013-exercise-4-show-the-total-time-spent-by-the-mentee-for-each-of-the-task-types)
-- [0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics](#0014-exercise-5-integrate-the-task-filtering-with-these-aggregate-metrics)
-- [0.0.15. Exercise 6: Add tasks from UI](#0015-exercise-6-add-tasks-from-ui)
-- [0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts](#0016-exercise-7-show-the-list-of-hashtags-and-their-corresponding-counts)
+- [Flask Dashboard for tracking developer productivity](#flask-dashboard-for-tracking-developer-productivity)
+    - [0.0.1. Is this project for you](#001-is-this-project-for-you)
+    - [0.0.2. Reference documents](#002-reference-documents)
+    - [0.0.3. What is not supported](#003-what-is-not-supported)
+    - [0.0.4. Minimum Viable Product](#004-minimum-viable-product)
+    - [0.0.5. Flask](#005-flask)
+    - [0.0.6. Setup your environment](#006-setup-your-environment)
+        - [0.0.6.1. Get the source code](#0061-get-the-source-code)
+    - [0.0.7. Files](#007-files)
+    - [0.0.8. Set up virtualenv](#008-set-up-virtualenv)
+    - [0.0.9. Feature 0: run app.py](#009-feature-0-run-apppy)
+    - [0.0.10. Exercise 1: Shows the list of tasks that a mentee has added](#0010-exercise-1-shows-the-list-of-tasks-that-a-mentee-has-added)
+    - [0.0.11. Exercise 2: Shows the list of tasks of a particular type](#0011-exercise-2-shows-the-list-of-tasks-of-a-particular-type)
+    - [0.0.12. Exercise 3: Build a better UI](#0012-exercise-3-build-a-better-ui)
+    - [0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types](#0013-exercise-4-show-the-total-time-spent-by-the-mentee-for-each-of-the-task-types)
+    - [0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics](#0014-exercise-5-integrate-the-task-filtering-with-these-aggregate-metrics)
+    - [0.0.15. Exercise 6: Add tasks from UI](#0015-exercise-6-add-tasks-from-ui)
+    - [0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts](#0016-exercise-7-show-the-list-of-hashtags-and-their-corresponding-counts)
 
 <!-- /TOC -->
+# Flask Dashboard for tracking developer productivity
 Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer. As a mentee, you are expected to do a lot - you read new articles/books, write code, debug and troubleshoot, pair program with other mentees in coding workshop or your mentor. This is involves managing time efficiently and doing the effective things. But as the old adage goes, "you can't manage what you can't measure".
 
 This project is the second of the three part series of building tools for the mentees for tracking time. The end goal of such a tool will be to aggregate anonymous data and analyze how does a typical mentee spend on blogging (b), coding (c), debugging (d), pair program (p) with mentor or other mentees.
 
-In this project we will be building a fully functional web dashboard for tracking efforts using Flask.
+In this project we will be building a fully functional web dashboard for tracking developer efforts using Flask.
 
 
 Short url for this page: **https://git.io/vdQj6** #TODO
 
-### 0.0.1. Is this project for you
+## 0.0.1. Is this project for you
 Before you progress further, let's check if we are ready to solve this. You should
 - Have a personal computer with working wifi and power cord
 - Have Python 3 installed on your computer. Yep, Python 3 only
@@ -41,7 +43,7 @@ Before you progress further, let's check if we are ready to solve this. You shou
 
 In addition, you should have taken a look at [Part 1](https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/trackcoder) of this three part exercise.
 
-### 0.0.2. Reference documents
+## 0.0.2. Reference documents
 Reading these links before attending project night, would help you a lot by providing
 the background needed to work through the exercieses.
 
@@ -51,7 +53,7 @@ the background needed to work through the exercieses.
 - [Flask Context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
 
 
-### 0.0.3. What is not supported
+## 0.0.3. What is not supported
 This project is not tested using Jupyter Notebook, PyCharm,
 Spider, or any other ide/text editor/programming environment for that matter.
 Atom or Sublime Text and the command line are the only supported development
@@ -59,7 +61,7 @@ environment for this project.
 
 Sounds good? Then let's dive into building a fully functional web app using flask.
 
-### 0.0.4. Minimum Viable Product
+## 0.0.4. Minimum Viable Product
 Our objective is to build a dashboard that tells the story of the progress 
 of a mentee during the mentorship program. The key metrics on this dashboard
 comes from data captured by them using the command line tool built in Part 
@@ -73,14 +75,14 @@ This is just a reference implementation to give you an idea of what a dashboard
 might look like, but you are not required to stick to this and encouraged to
 think of your own design. 
 
-### 0.0.5. Flask
+## 0.0.5. Flask
 For building the web interface, we will be using Flask.
 Flask is a micro web framework - it takes care of handling of the HTTP
 protocol for you and allows you focus on your application. It is flexible,
 lightweight yet powerful.
 
-### 0.0.6. Setup your environment
-#### 0.0.6.1. Get the source code
+## 0.0.6. Setup your environment
+### 0.0.6.1. Get the source code
 - If you are familiar with `git`, run
 
 		git clone https://github.com/chicagopython/CodingWorkshops.git
@@ -97,13 +99,13 @@ lightweight yet powerful.
 		> cd path\to\CodingWorkshops\problems\webdev\flask_trackcoder
 
 
-### 0.0.7. Files
+## 0.0.7. Files
 
 - `app.py` - Here you will find the basic skeleton of the flask app
 - `static/styles` - If you want to add static css and javascript, that goes here. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/static/)
 - `templates` - This file has the html template for showing rendering the data on the browser. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/templates/) 
 
-### 0.0.8. Set up virtualenv
+## 0.0.8. Set up virtualenv
 If you are using Linux or OS X, run the following to create a new virtualenv
 
     python3 -m venv venv
@@ -119,7 +121,7 @@ On Windows, run the following
     set %FLASK_APP%=app.py
 
 
-### 0.0.9. Feature 0: run app.py
+## 0.0.9. Feature 0: run app.py
 With your environment now set up run
 
     flask run
@@ -131,7 +133,7 @@ Next load up http://locahost:5000/tasks in your web browser.
 This will show you the list of tasks that have been added to the database built and provided
 in Part 1 of our project.
 
-### 0.0.10. Exercise 1: Shows the list of tasks that a mentee has added
+## 0.0.10. Exercise 1: Shows the list of tasks that a mentee has added
 `app.py` is the script is where the magic happens.
 
 Lets start at the routes:
@@ -144,7 +146,7 @@ Lets start at the routes:
 Visit http://localhost:5000/tasks and you will see all the tasks.
 How many tasks do you see?
 
-### 0.0.11. Exercise 2: Shows the list of tasks of a particular type
+## 0.0.11. Exercise 2: Shows the list of tasks of a particular type
 
 Recall that we have the following task types.
  - blogging (b)
@@ -162,7 +164,7 @@ Note: The data comes from database which is located in the folder
 '../../py101/trackcoder/to_do_list.db'. Changing it to another sqlite file,
 would change what you see on the dashboard.
 
-### 0.0.12. Exercise 3: Build a better UI
+## 0.0.12. Exercise 3: Build a better UI
 UI/UX is critical to keep your audience engaged.
 
 Here is the template from Bootrap that is used in the demo above.
@@ -187,17 +189,17 @@ Hint: If you are adding a css file locally, you can do it in the following manne
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/dashboard.css') }}">
 
 
-### 0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types
+## 0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types
 
 These should be placed next to each other so that one can compare how much time
 is devoted into each of the activity.
 
-### 0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics 
+## 0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics 
 
 Clicking on each of the task types should show only those tasks that are of
 that type, and filter out any task which is of different type.
 
-### 0.0.15. Exercise 6: Add tasks from UI
+## 0.0.15. Exercise 6: Add tasks from UI
 
 Add a form to the UI so that you can add a task from the web frontend.
 The task will take in three parameters 
@@ -207,7 +209,7 @@ The task will take in three parameters
 
 For example: "d, 30, #flask form submission
 
-### 0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts
+## 0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts
 
 Some of the task descriptions have hashtags in them that allows quickly aggregating
 on content type in addition to task type. For example, multiple tasks could
