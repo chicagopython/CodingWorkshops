@@ -101,9 +101,10 @@ lightweight yet powerful.
 
 ## 0.0.7. Files
 
-- `app.py` - Here you will find the basic skeleton of the flask app
+- `app.py` - Here you will find the basic skeleton of the flask app. This is where you will be
+  writing your python code for controlling the business logic of the problem.
 - `static/styles` - If you want to add static css and javascript, that goes here. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/static/)
-- `templates` - This file has the html template for showing rendering the data on the browser. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/templates/) 
+- `templates` - This folder has the file `tasks.html` which serves as the view for your app, rendering the data on the browser. [Docs](http://flask.pocoo.org/docs/1.0/tutorial/templates/) 
 
 ## 0.0.8. Set up virtualenv
 If you are using Linux or OS X, run the following to create a new virtualenv
@@ -165,18 +166,20 @@ Note: The data comes from database which is located in the folder
 would change what you see on the dashboard.
 
 ## 0.0.12. Exercise 3: Build a better UI
-UI/UX is critical to keep your audience engaged.
+UI/UX is critical to keep your audience engaged. The sample template `tasks.html`, comes with
+bootstap integrated, however it does not use any styling yet. That is what you would be doing as
+a part of this exercise.
 
 Here is the template from Bootrap that is used in the demo above.
 https://getbootstrap.com/docs/4.0/examples/dashboard/
 
-You can download it from https://getbootstrap.com/docs/4.0/examples/, however you can
-use any other template you think would be appropriate.
+It can be downloaded from https://getbootstrap.com/docs/4.0/examples/, however please feel
+free go with anything else that suits your team's design.
 
-Note: your html template should go to `template` directory and the `css` or `js`
+Hint: your html template should go to `template` directory and the `css` or `js`
 files should go into `static/styles` directory.
 
-Hint: Using a content delivery network, or CDN, you can get bootstrap css, js files into your app.
+Note: Using a content delivery network, or CDN, you can get bootstrap css, js files into your app.
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -184,7 +187,7 @@ Hint: Using a content delivery network, or CDN, you can get bootstrap css, js fi
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-Hint: If you are adding a css file locally, you can do it in the following manner
+If you are adding a css file locally, you can do it in the following manner
 
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/dashboard.css') }}">
 
