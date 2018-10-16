@@ -1,6 +1,6 @@
 <!-- TOC -->
 
-- [Flask Dashboard for tracking developer productivity](#flask-dashboard-for-tracking-developer-productivity)
+- [Flask Dashboard for tracking developer time](#flask-dashboard-for-tracking-developer-time)
     - [0.0.1. Is this project for you](#001-is-this-project-for-you)
     - [0.0.2. Reference documents](#002-reference-documents)
     - [0.0.3. What is not supported](#003-what-is-not-supported)
@@ -13,14 +13,14 @@
     - [0.0.9. Feature 0: run app.py](#009-feature-0-run-apppy)
     - [0.0.10. Exercise 1: Shows the list of tasks that a mentee has added](#0010-exercise-1-shows-the-list-of-tasks-that-a-mentee-has-added)
     - [0.0.11. Exercise 2: Shows the list of tasks of a particular type](#0011-exercise-2-shows-the-list-of-tasks-of-a-particular-type)
-    - [0.0.12. Exercise 3: Build a better UI](#0012-exercise-3-build-a-better-ui)
-    - [0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types](#0013-exercise-4-show-the-total-time-spent-by-the-mentee-for-each-of-the-task-types)
+    - [0.0.13. Exercise 3: Show the total time spent by the mentee for each of the task types](#0013-exercise-3-show-the-total-time-spent-by-the-mentee-for-each-of-the-task-types)
+    - [0.0.12. Exercise 4: Build a better UI](#0012-exercise-4-build-a-better-ui)
     - [0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics](#0014-exercise-5-integrate-the-task-filtering-with-these-aggregate-metrics)
     - [0.0.15. Exercise 6: Add tasks from UI](#0015-exercise-6-add-tasks-from-ui)
     - [0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts](#0016-exercise-7-show-the-list-of-hashtags-and-their-corresponding-counts)
 
 <!-- /TOC -->
-# Flask Dashboard for tracking developer productivity
+# Flask Dashboard for tracking developer time
 Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer. As a mentee, you are expected to do a lot - you read new articles/books, write code, debug and troubleshoot, pair program with other mentees in coding workshop or your mentor. This is involves managing time efficiently and doing the effective things. But as the old adage goes, "you can't manage what you can't measure".
 
 This project is the second of the three part series of building tools for the mentees for tracking time. The end goal of such a tool will be to aggregate anonymous data and analyze how does a typical mentee spend on blogging (b), coding (c), debugging (d), pair program (p) with mentor or other mentees.
@@ -41,7 +41,7 @@ Before you progress further, let's check if we are ready to solve this. You shou
 - You have read the [flask quick introduction](http://flask.pocoo.org/docs/0.12/quickstart/)
 
 
-In addition, you should have taken a look at [Part 1](https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/trackcoder) of this three part exercise.
+In addition, you should be familiar with [Part 1](https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/trackcoder) of this three part exercise.
 
 ## 0.0.2. Reference documents
 Reading these links before attending project night, would help you a lot by providing
@@ -51,6 +51,7 @@ the background needed to work through the exercieses.
 - [Flask Getting Started](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 - [Flask routing](http://flask.pocoo.org/snippets/57/)
 - [Flask Context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
+- [What is a Web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 
 
 ## 0.0.3. What is not supported
@@ -67,7 +68,7 @@ of a mentee during the mentorship program. The key metrics on this dashboard
 comes from data captured by them using the command line tool built in Part 
 1 of this project. We want to get insights on the time spent in each task type,
 and the effect of each task on the entire progress. Later in Part 3 we will use
-some data science approaches to analyze any patterns in this data.
+data science approaches to analyze any patterns in this data.
 
 ![](dashboard.gif)
 
@@ -128,16 +129,16 @@ With your environment now set up run
     flask run
 
 This will start a web server on port 5000.
-Read more one web servers [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 Next load up http://locahost:5000/tasks in your web browser. 
 
 This will show you the list of tasks that have been added to the database built and provided
 in Part 1 of our project.
 
+
 ## 0.0.10. Exercise 1: Shows the list of tasks that a mentee has added
 `app.py` is the script is where the magic happens.
 
-Lets start at the routes:
+Lets start with the routes:
 
     @app.route('/tasks/<task>', methods=['GET', 'POST'])
     def tasks(task):
@@ -146,6 +147,14 @@ Lets start at the routes:
 
 Visit http://localhost:5000/tasks and you will see all the tasks.
 How many tasks do you see?
+
+Feel free to add your own tasks 
+
+    cd ../../py101/trackcoder/  # change to Part 1
+    python app.py -a d 5  "#bootstrap trying to get form alignment working"
+
+Now if you refresh the page, you should be able to see the tasks you added on
+the dashboard.
 
 ## 0.0.11. Exercise 2: Shows the list of tasks of a particular type
 
@@ -165,10 +174,18 @@ Note: The data comes from database which is located in the folder
 '../../py101/trackcoder/to_do_list.db'. Changing it to another sqlite file,
 would change what you see on the dashboard.
 
-## 0.0.12. Exercise 3: Build a better UI
+## 0.0.13. Exercise 3: Show the total time spent by the mentee for each of the task types
+
+Find the cummulative time spent on each task type. These times should be 
+placed next to each other so that it is easy to compare how much time
+is devoted into each of the activity.
+
+Hint: You might find [context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
+useful.
+
+## 0.0.12. Exercise 4: Build a better UI
 UI/UX is critical to keep your audience engaged. The sample template `tasks.html`, comes with
-bootstap integrated, however it does not use any styling yet. That is what you would be doing as
-a part of this exercise.
+bootstap integrated, however it does not use any additional styling yet. That is what you would be doing as a part of this exercise.
 
 Here is the template from Bootrap that is used in the demo above.
 https://getbootstrap.com/docs/4.0/examples/dashboard/
@@ -191,16 +208,13 @@ If you are adding a css file locally, you can do it in the following manner
 
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/dashboard.css') }}">
 
-
-## 0.0.13. Exercise 4: Show the total time spent by the mentee for each of the task types
-
-These should be placed next to each other so that one can compare how much time
-is devoted into each of the activity.
+Bootstrap natively supports cards, and you see the examples [here](https://getbootstrap.com/docs/4.0/components/card/).
 
 ## 0.0.14. Exercise 5: Integrate the task filtering with these aggregate metrics 
 
-Clicking on each of the task types should show only those tasks that are of
-that type, and filter out any task which is of different type.
+Provide a way to easily filter out tasks of each type. Take a look at the demo above,
+on how it uses the cards almost as a button to filter each task type. Feel free to
+come up with your own design.
 
 ## 0.0.15. Exercise 6: Add tasks from UI
 
@@ -210,7 +224,11 @@ The task will take in three parameters
 - minutes spent
 - description
 
-For example: "d, 30, #flask form submission
+For example: 
+
+    d, 30, #flask form submission 
+
+could be an entry for the task.
 
 ## 0.0.16. Exercise 7: Show the list of hashtags and their corresponding counts
 
