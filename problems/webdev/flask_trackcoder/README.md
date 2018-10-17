@@ -235,7 +235,7 @@ files should go into `static/styles` directory.
 
 Now that you have a way to filter by task type and aggregated metrics on each task type, integrate these to provide a more unified user experience. Take a look at the demo above, on how it uses the cards almost as a button to filter each task type. Feel free to come up with your own design.
 
-Hint: Cards are a very common way of displaying aggregated information and Bootstrap natively supports cards. You see the examples [here](https://getbootstrap.com/docs/4.0/components/card/).
+Hint: Cards are a very common way of displaying aggregated information and Bootstrap natively supports cards. You can see the examples [here](https://getbootstrap.com/docs/4.0/components/card/).
 
 ## 1.17. Show the list of hashtags and their corresponding counts
 
