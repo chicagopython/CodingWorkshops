@@ -2,3 +2,4 @@ Flask
 peewee
 prompt_toolkit
 click
+Flask-WTF

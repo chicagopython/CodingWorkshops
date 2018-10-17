@@ -12,7 +12,7 @@
     <!-- Latest compiled and minified CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/dashboard.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/dashboard.css') }}"> -->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -20,104 +20,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Chicago Python Mentorship</a>
-      <input class="form-control form-control-dark w-100" type="text" placeholder="d,30, #bootstrap form completed" aria-label="Search">
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Add task</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Trending</span>
-            </h6>
-            <ul class="nav flex-column mb-2">
-              {% for tag, count in hashtags().items() %}
-              <li class="nav-item">
-                  <a class="nav-link" href="/search/{{tag}}">
-                  <span data-feather="hash"></span>
-                  {{tag}} ({{count}}) 
-                  </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </nav>
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
-            </div>
-          </div>
-
-          <!-- <canvas class="my-4" id="myChart" width="900" height="380"></canvas> -->
-          <div class="card-group">
-            <div class="card text-white bg-primary mb-3">
-              <div class="card-body">
-                <a href= "/tasks/b" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{b}}</h5>
-                <p class="card-text"><span data-feather="file"></span> Blogging</p>
-                </a>
-              </div>
-            </div>
-            <div class="card text-white bg-secondary mb-3">
-              <div class="card-body">
-                <a href= "/tasks/c" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{c}}</h5>
-                <p class="card-text"><span data-feather="code"></span> Coding</p>
-                </a>
-              </div>
-            </div>
-            <div class="card text-white bg-success mb-3">
-              <div class="card-body">
-                <a href= "/tasks/m" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{m}}</h5>
-                <p class="card-text"><span data-feather="user"></span> Mentor</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="card-group">
-            <div class="card text-white bg-danger mb-3">
-              <div class="card-body">
-                <a href= "/tasks/p" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{p}}</h5>
-                <p class="card-text"><span data-feather="users"></span> Pair Programming</p>
-                </a>
-              </div>
-            </div>
-            <div class="card text-white bg-info mb-3">
-              <div class="card-body">
-                <a href= "/tasks/d" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{d}}</h5>
-                <p class="card-text"><span data-feather="terminal"></span> Debugging</p>
-                </a>
-              </div>
-            </div>
-            <div class="card bg-dark mb-3">
-              <div class="card-body">
-                <a href= "/tasks/r" style="text-decoration: none; color: white">
-                <h5 class="card-title">{{r}}</h5>
-                <p class="card-text"><span data-feather="book"></span> Research</p>
-                </a>
-              </div>
-            </div>
-          </div>
           <h2>Tasks</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
@@ -143,8 +46,6 @@
             {%endfor%}
             </table>
           </div>
-        </main>
-      </div>
     </div>
 
     <!-- Bootstrap core JavaScript
