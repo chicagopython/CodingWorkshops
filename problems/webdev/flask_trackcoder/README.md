@@ -19,6 +19,7 @@
     - [1.15. Improve the UI](#115-improve-the-ui)
     - [1.16. Integrate the task filtering with these aggregate metrics](#116-integrate-the-task-filtering-with-these-aggregate-metrics)
     - [1.17. Show the list of hashtags and their corresponding counts](#117-show-the-list-of-hashtags-and-their-corresponding-counts)
+- [Feedback](#feedback)
 
 <!-- /TOC -->
 # 1. Flask Dashboard for tracking developer time
@@ -248,3 +249,12 @@ hashtags is an easy way.
 Provide a way to aggregate the hashtags that has been used in the tasks
 and show the count next to each of them. Clicking on a particlar
 hashtag should show only the tasks that have that hashtag.
+
+# Feedback
+
+Thanks for attending this project night. We put in a lot of effor to
+make this useful for you. However, we can not make it better, unless
+we hear back from you on what you want and collect data to make changes.
+Please take a few moments to fill in the small form below and help us improve it.
+
+[![feedback](../../../docs/feedback.png)](https://docs.google.com/forms/d/e/1FAIpQLSePDQlWOibJrF7rI5KrYhzUSNfXp9GMP-6b-bjC8_qSFgYp-w/viewform?usp=pp_url&entry.813953991=https://bit.ly/flask_project)
