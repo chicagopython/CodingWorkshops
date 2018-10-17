@@ -51,7 +51,7 @@ Reading these links before attending project night, would help you a lot by prov
 the background needed to work through the exercieses.
 
 - [What is a Web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- [Flask Getting Started](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [Flask Quick Start](http://flask.pocoo.org/docs/1.0/quickstart/)
 - [Flask routing](http://flask.pocoo.org/snippets/57/)
 - [Flask Web Forms](https://pythonspot.com/flask-web-forms/)
 - [Flask Context processors](http://flask.pocoo.org/docs/1.0/templating/#context-processors)
@@ -248,4 +248,3 @@ hashtags is an easy way.
 Provide a way to aggregate the hashtags that has been used in the tasks
 and show the count next to each of them. Clicking on a particlar
 hashtag should show only the tasks that have that hashtag.
-
