@@ -29,7 +29,7 @@ This project is the second of the three part series of building tools for the me
 
 In this project we will be building a fully functional web dashboard for tracking developer efforts using Flask.
 
-Short url for this page: **https://git.io/vdQj6** #TODO
+Short url for this page: **http://bit.ly/flask_trackcoder**
 
 ## 1.1. Is this project for you
 
