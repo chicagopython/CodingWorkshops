@@ -1,27 +1,5 @@
 # 1. Python Project Night - Hands on Python programming for Chicago Pythonistas
 
-<!-- TOC -->
-
-- [1. Python Project Night - Hands on Python programming for Chicago Pythonistas](#1-python-project-night---hands-on-python-programming-for-chicago-pythonistas)
-    - [1.1. Code of Conduct](#11-code-of-conduct)
-    - [1.2. Contributors](#12-contributors)
-    - [1.3. Challenge Problems](#13-challenge-problems)
-        - [1.3.1. What you need](#131-what-you-need)
-    - [1.4. Previous Projects](#14-previous-projects)
-        - [1.4.1. Python101](#141-python101)
-            - [1.4.1.1. Python Koans](#1411-python-koans)
-            - [1.4.1.2. Python Team Projects](#1412-python-team-projects)
-            - [1.4.1.3. Intro to PyTest and Travis-CI](#1413-intro-to-pytest-and-travis-ci)
-        - [1.4.2. WebDev](#142-webdev)
-            - [1.4.2.1. Flask Team Projects](#1421-flask-team-projects)
-            - [1.4.2.2. Flask Collage](#1422-flask-collage)
-        - [1.4.3. Data Science](#143-data-science)
-            - [1.4.3.1. Data Analysis With Pandas](#1431-data-analysis-with-pandas)
-            - [1.4.3.2. Diversif.ai](#1432-diversifai)
-            - [1.4.3.3. Introduction to Text Analysis with sklearn](#1433-introduction-to-text-analysis-with-sklearn)
-
-<!-- /TOC -->
-
 Welcome to the Python Projects Night organized by Chicago Python User Group or ChiPy.
 Here you will find python challenges that we solve together as a groups every third
 Thursday of the month at 6:30 pm at Braintree's Chicago Office. This repository has the
@@ -35,12 +13,8 @@ collection of the Challenge problems that we solve at Project Nights.
 
 ## 1.2. Contributors
 
-Thanks to those who come down Python Project Night every month. Here is the list of folks who have
-spent their time in bringing this repository to you.
+[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/0)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/0)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/1)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/1)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/2)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/2)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/3)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/3)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/4)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/4)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/5)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/5)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/6)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/6)[![](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/images/7)](https://sourcerer.io/fame/tathagata/chicagopython/CodingWorkshops/links/7)
 
-- [Nik](https://github.com/sharma7n)
-- [Hector Rios](https://github.com/hectron)
-- [Tathagata](https://github.com/tathagata)
 
 If you have found a bug, typo or want to help out, please look at the contributing guidelines.
 
