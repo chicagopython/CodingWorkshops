@@ -138,7 +138,7 @@ With your environment now set up run
     flask run
 
 This will start a web server on port 5000.
-Next load up http://locahost:5000/tasks in your web browser.
+Next load up http://localhost:5000/tasks in your web browser.
 
 This will show you the list of tasks that have been added to the database built and provided
 in Part 1 of our project.
@@ -149,7 +149,9 @@ in Part 1 of our project.
 
 Lets start with the routes:
 
-    @app.route('/tasks/<task>', methods=['GET', 'POST'], defaults={'tasks':None})
+
+    @app.route('/tasks/', methods=['GET', 'POST'], defaults={'task':''})
+    @app.route('/tasks/<task>', methods=['GET', 'POST'])
     def tasks(task):
         tasks = [t for t in ToDo.select()]
         return render_template('tasks.html', tasks=tasks)
