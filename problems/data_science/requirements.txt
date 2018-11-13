@@ -7,7 +7,7 @@ pytz==2018.4
 scikit-learn==0.19.1
 scipy==1.0.1
 six==1.11.0
-sklearn==0.0
+sklearn==0.20.0
 jupyter
 altair==2.2.2
 vega==1.4.0
