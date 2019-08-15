@@ -76,6 +76,7 @@ If you're not working in a Jupyter notebook, consider creating one now to make i
 
 One cool visualization you might consider making is an upset plot. This chart type allows you to plot multiple set intersections (like a Venn Diagram on steroids). Luckily, a Python library called UpsetPlot exists to make creation easy. Let's `pip install upsetplot` from our terminal (or `!pip install --quiet upsetplot` from within Jupyter). An example of what your upsetplot might look like:
 
+![upsetplot](./upsetplot-example.png)
 
 ### Some questions you might want to consider:
 
