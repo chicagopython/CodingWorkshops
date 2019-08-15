@@ -51,10 +51,28 @@ Don't spend too much time on this step -- the fun part is data exploration!
 
 ## Challenge #2: Exploratory data analysis
 
+Exploratory Data Analysis is really what it sounds like: bumbling around in the weeds of the dataset _exploring_ what is there. So literally go key by key in the dictionary (JSON) response object and see what's there. You don't have to look at every key and value...but do dig a little into the things that seem promising, surprising, or interesting.
+
 * There's nothing wrong with simply counting results from queries with different **description** strings!
 * Though you can try things like checking for a string `"foo" in "FOO data bar data baz baz baz".lower()`
 * Or the adventurous may try regex, e.g. `import re; re.search("foo", "FOO data bar data baz baz baz", re.IGNORECASE)`
 * You may like the `Counter` object from [`collections`](https://docs.python.org/3/library/collections.html#counter-objects) in the Python standard library.
+
+For example, if you had the response data in an object called `results` you could group by company like this:
+
+```python
+all_the_companies = Counter(result['company'] for result in results)
+```
+
+Or if you want to search for a specific set of languages (maybe the ones you know!)...you can do that.
+
+
+
+## Challenge #3: Visualization (if there's time)
+
+Hopefully the content in this notebook can help. Go to town!
+(Click the button to open the included "ipynb" in Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][colab]
+
 
 ### Some questions you might want to consider:
 
@@ -63,3 +81,5 @@ Does the dataset tell you anything about which companies use the GitHub for hiri
 - Where might you get additional information?
 - How often should you pull the data? What would capture over time give you?
 - Choose your own adventure and share with the group what you have learned!
+
+[colab]: https://colab.research.google.com/github/chicagopython/CodingWorkshops/blob/master/problems/data_science/github_jobs_api/GitHub_Jobs_API.ipynb
