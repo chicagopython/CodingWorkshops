@@ -49,7 +49,7 @@ https://jobs.github.com/positions/<single-job-id>.json
 Don't spend too much time on this step -- the fun part is data exploration!
 
 
-## Challenge #2: Exploratory data analysis
+## Challenge #2: Exploratory Data Analysis (EDA)
 
 Exploratory Data Analysis is really what it sounds like: bumbling around in the weeds of the dataset _exploring_ what is there. So literally go key by key in the dictionary (JSON) response object and see what's there. You don't have to look at every key and value...but do dig a little into the things that seem promising, surprising, or interesting.
 
@@ -68,10 +68,13 @@ Or if you want to search for a specific set of languages (maybe the ones you kno
 
 
 
-## Challenge #3: Visualization (if there's time)
+## Challenge #3: Visualization
 
-Hopefully the content in this notebook can help. Go to town!
-(Click the button to open the included "ipynb" in Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][colab]
+Exploring data can be aided significantly by plotting the data. It's often easier to visualize insights than to learn them just from looking at data. Visualizations are also a great way to summarize information when sharing your findings.
+
+If you're not working in a Jupyter notebook, consider creating one now to make inspecting the visualizations easier. In your environment, `pip install jupyter`. Then type `jupyter notebook` from your terminal.
+
+One cool visualization you might consider making is an upset plot. This chart type allows you to plot multiple set intersections (like a Venn Diagram on steroids). Luckily, a Python library called UpsetPlot exists to make creation easy. Let's `pip install upsetplot` from our terminal (or `!pip install --quiet upsetplot` from within Jupyter). An example of what your upsetplot might look like:
 
 
 ### Some questions you might want to consider:
@@ -81,5 +84,3 @@ Does the dataset tell you anything about which companies use the GitHub for hiri
 - Where might you get additional information?
 - How often should you pull the data? What would capture over time give you?
 - Choose your own adventure and share with the group what you have learned!
-
-[colab]: https://colab.research.google.com/github/chicagopython/CodingWorkshops/blob/master/problems/data_science/github_jobs_api/GitHub_Jobs_API.ipynb
