@@ -14,5 +14,12 @@ if __name__ == "__main__":
         if message == "quit":
             print("Roger that, thanks for playing!")
             player.in_game = False
+        elif message == "catch":
+            player.catch_pymon()
+            print("You just caught a Pymon!")
+        elif message == "fight":
+            player.fight_baddie()
+        elif message == "check":
+            player.check_pymon() 
         else:
             print(player.repeat(message))
