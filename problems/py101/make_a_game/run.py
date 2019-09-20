@@ -2,11 +2,11 @@ from lib.player import Player
 
 if __name__ == "__main__":
     player = Player()
-    player_name = input("Hello! What is your name? ")
+    player_name = input("Yo! What is your name? ")
     player.set_name(player_name)
-    print(f"Welcome {player.name} to this new game!")
-    print("Right now, all we can do is repeat what you say.")
-    print("Edit this program to add in more functionality!")
+    print(f"Welcome {player.name} to Pymon!")
+    print("Type 'catch' to catch a Pymon!")
+    print("Type 'Fight' to fight!")
     print("To stop playing, type quit")
 
     while player.in_game:
