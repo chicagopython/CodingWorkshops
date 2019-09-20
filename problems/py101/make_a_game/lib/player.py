@@ -22,7 +22,7 @@ class Player:
 
     def catch_pymon(self):
         self.has_pymon = True
-        list_of_pymon = ["Justin", "Pymander", "Dexter", "Mario"]
+        list_of_pymon = ["Pykachu", "Pymander", "Pytle", "Pybasaur"]
         seed = random.randint(0,len(list_of_pymon) - 1)
         name = list_of_pymon[seed]
         self.pymon = Pythonmon(name)
