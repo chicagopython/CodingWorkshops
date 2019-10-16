@@ -34,8 +34,8 @@ Your goal is to train a binary classification model on the data in `default_risk
 There are three data files, one metadata file, and a jupyter notebook.
 
 1. default_risk_train_data.csv -- The data you will use to train your models. Includes all potential features and the target.
-2. default_risk_test_data.csv -- The data you will use to test your models. Includes all potential features and the target.
-3. perfect_deliverable.csv -- The CSV with perfect predictions for each SK_ID_CURR in the test set. This is the same format the final deliverable should be submitted to the bank in.
+2. default_risk_test_data.csv -- The data you will use to test your models. Includes all potential features, but NOT the target (which theoretically reflect unknown future default status).
+3. perfect_deliverable.csv -- The CSV with perfect predictions for each SK_ID_CURR in the test set. You should only use this at the very end to test the model and NEVER factor it into training your model. To prevent overfitting, you should test models sparingly. This is the same format the final deliverable should be submitted to the bank in.
 4. default_risk_column_descriptions.csv -- Descriptive metadata for the columns found in the train and test datasets.
 5. default_risk.ipynb -- The jupyer notebook where all coding should be completed, unless you opt to work in a different environment.
 
