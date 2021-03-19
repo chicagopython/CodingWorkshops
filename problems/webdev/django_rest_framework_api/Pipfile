@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 Django = "~=2.2.6"
-djangorestframework = "~=3.10.3"
+djangorestframework = "~=3.11.2"
 
 
 [requires]
