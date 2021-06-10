@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-Django = "~=2.2.6"
+Django = "~=2.2.24"
 djangorestframework = "~=3.10.3"
 
 
