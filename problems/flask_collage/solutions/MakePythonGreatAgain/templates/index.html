@@ -1,0 +1,50 @@
+<html>
+
+<style>
+body {
+	background-image: url("background.jpg");
+}
+
+.collage {
+	max-width: 640px;
+	line-height: 0;
+	-webkit-column-count: 5;
+	-webkit-column-gap:	  0px;
+	-moz-column-count:	5;
+	-moz-column-gap:	0px;
+	column-count: 5;
+	column-gap: 0px;
+}
+
+.collage img {
+	height: auto;
+	width: 100%;
+}
+
+.collage img:hover {
+	width: 120%;
+}
+
+.name {
+	font: 18px bold Arial;
+}
+
+</style>
+
+
+<head>
+	<title>Make Python Great Again!</title>	
+</head>
+
+<body>
+	<h1>Flask Collage</h1>
+	<h2>by Anish, Sandeep, and V</h2>
+	<div class = "collage">
+	{% for member in members %}
+		<img src = "{{ member.photo }}"/>
+		<div class = "name">{{ member.name }}</div>
+	{% endfor %}
+	</div>
+</body>
+
+</html>
