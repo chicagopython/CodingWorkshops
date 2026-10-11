@@ -5,7 +5,7 @@ All developers in the modern day need to understand web technologies at some lev
 
 
 ## Overview
-We will make a web app that serves as both a CLIENT to an external api (exchangeratesapi.io). This app will show conversion rates for currencies, and then add some more complex data.
+We will make a web app that serves as both a CLIENT to an external api (a keyless exchange-rates endpoint). This app will show conversion rates for currencies, and then add some more complex data.
 
  
 ## Prerequisites
@@ -92,11 +92,11 @@ def exchange_rates():
 Then replace any references in your code to use the function instead of defining the dictionary in your route!
 
 ## Automatic Data
-Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with [ExchangeRatesAPI.io](http://exchangeratesapi.io). This is a free api that runs over simple HTTPS! We'll have something like the following: 
+Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with the [AllRatesToday open ECB endpoint](https://allratestoday.com/api/compat/exchangeratesapi/latest). This is a free, keyless api that runs over simple HTTPS! We'll have something like the following: 
 
 ```
 def exchange_rates():
-  response = requests.get('https://api.exchangeratesapi.io/latest')
+  response = requests.get('https://allratestoday.com/api/compat/exchangeratesapi/latest')
   return # What are we going to put here now? 
 ```
 
@@ -110,7 +110,7 @@ import pdb; pdb.set_trace()
 ```
 
 ### Correct Currency
-Are we sure the previous step is getting us the currency in our `BASE_CURRENCY` variable? Investigate the [api docs](http://exchangeratesapi.io) to find out how you can change the base currency to the one we want.
+Are we sure the previous step is getting us the currency in our `BASE_CURRENCY` variable? Investigate the [api docs](https://allratestoday.com/migrate/) to find out how you can change the base currency to the one we want.
 
 
 # You DID it! Now what?
